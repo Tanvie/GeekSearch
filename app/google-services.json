@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "922850925967",
+    "project_id": "geek-search-3da91",
+    "storage_bucket": "geek-search-3da91.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:922850925967:android:e34babcc10efe369413ffa",
+        "android_client_info": {
+          "package_name": "com.example.geeksearch"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "922850925967-li3v09ev6erjl5nbpm9u9lfkebb5mel3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCafcBxrqw5katEyY9OtXgwBH2tLARm8cc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "922850925967-li3v09ev6erjl5nbpm9u9lfkebb5mel3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

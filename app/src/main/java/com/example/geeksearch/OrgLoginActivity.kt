@@ -11,9 +11,16 @@ class OrgLoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_org_login)
 
         val laBtSkip = findViewById<Button>(R.id.laBtSkip)
+        val olBtRegister = findViewById<Button>(R.id.olBtRegister)
+
 
         laBtSkip.setOnClickListener {
             startActivity(Intent(this, OrgHomeActivity::class.java))
         }
+
+        olBtRegister.setOnClickListener {
+            startActivity(Intent(this, OrgRegisterActivity::class.java))
+        }
+
     }
 }

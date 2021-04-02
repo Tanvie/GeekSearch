@@ -20,7 +20,7 @@ class OrgRegisterActivity : AppCompatActivity() {
         var mAuth: FirebaseAuth = FirebaseAuth.getInstance()
 
         val orBtLogin = findViewById<Button>(R.id.orBtLogin)
-        val orEdName = findViewById<EditText>(R.id.orEdName)
+        val orEdName = findViewById<EditText>(R.id.orEtName)
         val orEdMail = findViewById<EditText>(R.id.orEdMail)
         val orEdPassword = findViewById<EditText>(R.id.orEdPassword)
         val orEdLocation = findViewById<EditText>(R.id.orEdLocation)

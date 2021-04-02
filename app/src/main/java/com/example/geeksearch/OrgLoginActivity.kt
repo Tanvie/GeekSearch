@@ -13,7 +13,7 @@ class OrgLoginActivity : AppCompatActivity() {
         val laBtSkip = findViewById<Button>(R.id.laBtSkip)
 
         laBtSkip.setOnClickListener {
-            startActivity(Intent(this, HomeActivity::class.java))
+            startActivity(Intent(this, OrgHomeActivity::class.java))
         }
     }
 }

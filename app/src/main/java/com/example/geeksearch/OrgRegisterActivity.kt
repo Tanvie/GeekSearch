@@ -37,13 +37,11 @@ class OrgRegisterActivity : AppCompatActivity() {
             var orgEmail = orEdMail.text.toString()
             var orgLocation = orEdLocation.text.toString()
             var orgPassword = orEdPassword.text.toString()
-            print("In BT REGISTER")
             mAuth.createUserWithEmailAndPassword(orgEmail, orgPassword)
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
 
                         var org = Organisation(orgName, orgEmail, orgLocation, orgPassword)
-//                        Log.d("First Error")
 
                         FirebaseDatabase.getInstance().getReference("organisations")
                             .child(FirebaseAuth.getInstance().currentUser.uid)

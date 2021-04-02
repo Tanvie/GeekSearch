@@ -37,7 +37,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
-        android:hint="Mail Adress"
+        android:hint="Mail Address"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.592"

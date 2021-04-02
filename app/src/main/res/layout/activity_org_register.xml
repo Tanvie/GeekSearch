@@ -81,8 +81,8 @@
                 android:text="Already A User?" />
 
 
-            <TextView
-                android:id="@+id/orTvLogin"
+            <Button
+                android:id="@+id/orBtLogin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"

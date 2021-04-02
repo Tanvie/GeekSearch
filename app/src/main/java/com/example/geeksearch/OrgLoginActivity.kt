@@ -4,7 +4,11 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class OrgLoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,6 +21,9 @@ class OrgLoginActivity : AppCompatActivity() {
         val et_login_mail = findViewById<EditText>(R.id.et_login_mail)
         val et_login_password = findViewById<EditText>(R.id.et_login_password)
 
+        var mauth: FirebaseAuth
+        mauth = Firebase.auth
+
         laBtSkip.setOnClickListener {
             startActivity(Intent(this, OrgHomeActivity::class.java))
         }
@@ -28,6 +35,29 @@ class OrgLoginActivity : AppCompatActivity() {
         olBtLogin.setOnClickListener {
             var orgMail = et_login_mail.text.toString()
             var orgPassword = et_login_password.text.toString()
+            val currUser = mauth.currentUser
+            if (currUser != null) {
+                //reload();
+            }
+            mauth.signInWithEmailAndPassword(orgMail, orgPassword)
+                .addOnCompleteListener(this) { task ->
+                    if (task.isSuccessful) {
+                        // Sign in success, update UI with the signed-in user's information
+                        val user = mauth.currentUser
+                        Toast.makeText(
+                            baseContext, "Login Successful",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                        startActivity(Intent(this, OrgHomeActivity::class.java))
+                    } else {
+                        // If sign in fails, display a message to the user.
+                        Toast.makeText(
+                            baseContext, "Authentication failed.",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                }
+
         }
     }
 }

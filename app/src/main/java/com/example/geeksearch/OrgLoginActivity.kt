@@ -15,18 +15,18 @@ class OrgLoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_org_login)
 
-        val laBtSkip = findViewById<Button>(R.id.laBtSkip)
+//        val laBtSkip = findViewById<Button>(R.id.laBtSkip)
         val olBtRegister = findViewById<Button>(R.id.olBtRegister)
         val olBtLogin = findViewById<Button>(R.id.olBtLogin)
-        val et_login_mail = findViewById<EditText>(R.id.et_login_mail)
-        val et_login_password = findViewById<EditText>(R.id.et_login_password)
+        val et_login_mail = findViewById<EditText>(R.id.olEdMail)
+        val et_login_password = findViewById<EditText>(R.id.olEdPassword)
 
         var mauth: FirebaseAuth
         mauth = Firebase.auth
 
-        laBtSkip.setOnClickListener {
-            startActivity(Intent(this, OrgHomeActivity::class.java))
-        }
+//        laBtSkip.setOnClickListener {
+//            startActivity(Intent(this, OrgHomeActivity::class.java))
+//        }
 
         olBtRegister.setOnClickListener {
             startActivity(Intent(this, OrgRegisterActivity::class.java))

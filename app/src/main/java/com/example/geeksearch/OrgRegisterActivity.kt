@@ -16,7 +16,7 @@ class OrgRegisterActivity : AppCompatActivity() {
         setContentView(R.layout.activity_org_register)
 
         val database = FirebaseDatabase.getInstance()
-        val myRef = database.getReference("organisations")
+//        val myRef = database.getReference("organisations")
         var mAuth: FirebaseAuth = FirebaseAuth.getInstance()
 
         val orBtLogin = findViewById<Button>(R.id.orBtLogin)

@@ -2,6 +2,7 @@ package com.example.geeksearch
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.TextUtils
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -42,37 +43,73 @@ class UserRegisterActivity : AppCompatActivity() {
             val userCollege = urEdCollege.text.toString()
             val userDegree = urEdDegree.text.toString()
 
+            if (TextUtils.isEmpty(userEmail)) {
+                Toast.makeText(
+                    applicationContext, "Please provide a Email!",
+                    Toast.LENGTH_LONG
+                ).show()
+            } else if (TextUtils.isEmpty(userPassword)) {
+                Toast.makeText(
+                    applicationContext, "Please provide a Password!",
+                    Toast.LENGTH_LONG
+                ).show()
+            } else if (TextUtils.isEmpty(userName)) {
+                Toast.makeText(
+                    applicationContext, "Please provide Your Name!",
+                    Toast.LENGTH_LONG
+                ).show()
+            } else if (TextUtils.isEmpty(userPhone)) {
+                Toast.makeText(
+                    applicationContext, "Please provide a Contact Number!",
+                    Toast.LENGTH_LONG
+                ).show()
+            } else if (TextUtils.isEmpty(userLocation)) {
+                Toast.makeText(
+                    applicationContext, "Please provide your Location!",
+                    Toast.LENGTH_LONG
+                ).show()
+            } else if (TextUtils.isEmpty(userCollege)) {
+                Toast.makeText(
+                    applicationContext, "Please provide your College Name!",
+                    Toast.LENGTH_LONG
+                ).show()
+            } else if (TextUtils.isEmpty(userDegree)) {
+                Toast.makeText(
+                    applicationContext, "Please provide your Degree!",
+                    Toast.LENGTH_LONG
+                ).show()
+            } else {
+                mAuth.createUserWithEmailAndPassword(userEmail, userPassword)
+                    .addOnCompleteListener(this) { task ->
+                        if (task.isSuccessful) {
 
-            mAuth.createUserWithEmailAndPassword(userEmail, userPassword)
-                .addOnCompleteListener(this) { task ->
-                    if (task.isSuccessful) {
+                            val user = User(
+                                userEmail,
+                                userName,
+                                userPhone,
+                                userLocation,
+                                userCollege,
+                                userDegree
+                            )
 
-                        val user = User(
-                            userEmail,
-                            userName,
-                            userPhone,
-                            userLocation,
-                            userCollege,
-                            userDegree
-                        )
+                            FirebaseDatabase.getInstance().getReference("users")
+                                .child(FirebaseAuth.getInstance().currentUser.uid)
+                                .setValue(user).addOnCompleteListener(this) {
+                                    Toast.makeText(
+                                        baseContext, "Registration Done",
+                                        Toast.LENGTH_LONG
+                                    ).show()
 
-                        FirebaseDatabase.getInstance().getReference("users")
-                            .child(FirebaseAuth.getInstance().currentUser.uid)
-                            .setValue(user).addOnCompleteListener(this) {
-                                Toast.makeText(
-                                    baseContext, "Registration Done",
-                                    Toast.LENGTH_LONG
-                                ).show()
-
-                                startActivity(Intent(this, HomeActivity::class.java))
-                            }
-                    } else {
-                        Toast.makeText(
-                            baseContext, "Authentication failed.",
-                            Toast.LENGTH_LONG
-                        ).show()
+                                    startActivity(Intent(this, HomeActivity::class.java))
+                                }
+                        } else {
+                            Toast.makeText(
+                                baseContext, "Authentication failed.",
+                                Toast.LENGTH_LONG
+                            ).show()
+                        }
                     }
-                }
+            }
         }
 
 

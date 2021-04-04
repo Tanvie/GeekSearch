@@ -41,7 +41,7 @@ class OrgRegisterActivity : AppCompatActivity() {
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
 
-                        var org = Organisation(orgName, orgEmail, orgLocation, orgPassword)
+                        val org = Organisation(orgName, orgEmail, orgLocation, orgPassword)
 
                         FirebaseDatabase.getInstance().getReference("organisations")
                             .child(FirebaseAuth.getInstance().currentUser.uid)

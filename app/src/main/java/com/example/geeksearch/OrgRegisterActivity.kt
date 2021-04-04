@@ -2,6 +2,7 @@ package com.example.geeksearch
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.TextUtils
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -16,7 +17,7 @@ class OrgRegisterActivity : AppCompatActivity() {
         setContentView(R.layout.activity_org_register)
 
         val database = FirebaseDatabase.getInstance()
-        val myRef = database.getReference("organisations")
+//        val myRef = database.getReference("organisations")
         var mAuth: FirebaseAuth = FirebaseAuth.getInstance()
 
         val orBtLogin = findViewById<Button>(R.id.orBtLogin)
@@ -37,29 +38,52 @@ class OrgRegisterActivity : AppCompatActivity() {
             var orgEmail = orEdMail.text.toString()
             var orgLocation = orEdLocation.text.toString()
             var orgPassword = orEdPassword.text.toString()
-            mAuth.createUserWithEmailAndPassword(orgEmail, orgPassword)
-                .addOnCompleteListener(this) { task ->
-                    if (task.isSuccessful) {
 
-                        var org = Organisation(orgName, orgEmail, orgLocation, orgPassword)
+            if (TextUtils.isEmpty(orgEmail)) {
+                Toast.makeText(
+                    applicationContext, "Please provide a Email!",
+                    Toast.LENGTH_LONG
+                ).show()
+            } else if (TextUtils.isEmpty(orgPassword)) {
+                Toast.makeText(
+                    applicationContext, "Please provide a Password!",
+                    Toast.LENGTH_LONG
+                ).show()
+            } else if (TextUtils.isEmpty(orgName)) {
+                Toast.makeText(
+                    applicationContext, "Please provide Organisation Name!",
+                    Toast.LENGTH_LONG
+                ).show()
+            } else if (TextUtils.isEmpty(orgLocation)) {
+                Toast.makeText(
+                    applicationContext, "Please provide Location!",
+                    Toast.LENGTH_LONG
+                ).show()
+            } else {
+                mAuth.createUserWithEmailAndPassword(orgEmail, orgPassword)
+                    .addOnCompleteListener(this) { task ->
+                        if (task.isSuccessful) {
 
-                        FirebaseDatabase.getInstance().getReference("organisations")
-                            .child(FirebaseAuth.getInstance().currentUser.uid)
-                            .setValue(org).addOnCompleteListener(this) {
-                                Toast.makeText(
-                                    baseContext, "Registration Done",
-                                    Toast.LENGTH_SHORT
-                                ).show()
+                            val org = Organisation(orgName, orgEmail, orgLocation, orgPassword)
 
-                                startActivity(Intent(this, OrgHomeActivity::class.java))
-                            }
-                    } else {
-                        Toast.makeText(
-                            baseContext, "Authentication failed.",
-                            Toast.LENGTH_SHORT
-                        ).show()
+                            FirebaseDatabase.getInstance().getReference("organisations")
+                                .child(FirebaseAuth.getInstance().currentUser.uid)
+                                .setValue(org).addOnCompleteListener(this) {
+                                    Toast.makeText(
+                                        baseContext, "Registration Done",
+                                        Toast.LENGTH_SHORT
+                                    ).show()
+
+                                    startActivity(Intent(this, OrgHomeActivity::class.java))
+                                }
+                        } else {
+                            Toast.makeText(
+                                baseContext, "Authentication failed.",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
                     }
-                }
+            }
         }
     }
 }

@@ -15,7 +15,6 @@ class UserRegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_register)
 
-
         val mAuth: FirebaseAuth = FirebaseAuth.getInstance()
 
         val urBtLogin = findViewById<Button>(R.id.urBtLogin)

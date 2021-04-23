@@ -45,11 +45,25 @@
 
         <Button
             android:id="@+id/haBtCreateTeam"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
             android:layout_marginTop="50dp"
             android:layout_marginEnd="40dp"
             android:text="Create team" />
+
+        <Button
+            android:id="@+id/haBtLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Logout" />
+
+        <Button
+            android:id="@+id/haBtProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Profile" />
+
     </LinearLayout>
+
 </RelativeLayout>

@@ -1,4 +1,4 @@
-package com.example.geeksearch
+package com.example.geeksearch.organisation
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,7 +9,8 @@ import android.widget.EditText
 import android.widget.RadioButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.google.firebase.auth.FirebaseAuth
+import com.example.geeksearch.EventModel
+import com.example.geeksearch.R
 import com.google.firebase.database.FirebaseDatabase
 
 
@@ -27,10 +28,12 @@ class AddEventActivity : AppCompatActivity() {
         val ethackStart = findViewById<EditText>(R.id.ethckstr)
         val ethackEnd = findViewById<EditText>(R.id.ethckEnd)
         val etPrizes = findViewById<EditText>(R.id.etPrizes)
+        val etEventRegLink = findViewById<EditText>(R.id.etEventRegLink)
         val btsubmit = findViewById<Button>(R.id.btSubmit)
         val rbtSoftware = findViewById<RadioButton>(R.id.rbsoftware)
         val rbthardware = findViewById<RadioButton>(R.id.rbhardware)
         val rbBoth = findViewById<RadioButton>(R.id.rbBoth)
+
         var domain = String()
 
         if (rbtSoftware.isChecked) {
@@ -47,6 +50,7 @@ class AddEventActivity : AppCompatActivity() {
             val eligibity = etEligibility.text.toString()
             val regOpenDate = etRegOpen.text.toString()
             val regCloseDate = etRegClose.text.toString()
+            val regEventLink = etEventRegLink.text.toString()
             val hckStart = ethackStart.text.toString()
             val hckEnd = ethackEnd.text.toString()
             val prizes = etPrizes.text.toString()
@@ -92,8 +96,13 @@ class AddEventActivity : AppCompatActivity() {
                     applicationContext, "Mention Prizes!",
                     Toast.LENGTH_LONG
                 ).show()
+            } else if (TextUtils.isEmpty(regEventLink)) {
+                Toast.makeText(
+                    applicationContext, "Hackathon Registration Link Missing!",
+                    Toast.LENGTH_LONG
+                ).show()
             } else {
-                val event = Event(
+                val event = EventModel(
                     hckname,
                     hckDes,
                     eligibity,
@@ -102,17 +111,18 @@ class AddEventActivity : AppCompatActivity() {
                     hckStart,
                     hckEnd,
                     prizes,
-                    domain
+                    domain,
+                    regEventLink
                 )
                 FirebaseDatabase.getInstance().getReference("Events")
-                    .child(FirebaseAuth.getInstance().currentUser.uid)
+                    .push()
                     .setValue(event).addOnCompleteListener(this) {
                         Toast.makeText(
                             baseContext, "Event Added",
                             Toast.LENGTH_LONG
                         ).show()
 
-                        startActivity(Intent(this, HomeActivity::class.java))
+                        startActivity(Intent(this, OrgHomeActivity::class.java))
                     }
             }
 

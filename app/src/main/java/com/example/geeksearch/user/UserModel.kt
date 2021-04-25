@@ -1,6 +1,6 @@
-package com.example.geeksearch
+package com.example.geeksearch.user
 
-class User {
+class UserModel {
 
     lateinit var userEmail: String
     lateinit var userName: String

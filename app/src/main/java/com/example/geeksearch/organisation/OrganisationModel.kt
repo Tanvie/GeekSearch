@@ -1,6 +1,6 @@
-package com.example.geeksearch
+package com.example.geeksearch.organisation
 
-class Organisation {
+class OrganisationModel {
 
     lateinit var orgName: String
     lateinit var orgEmail: String

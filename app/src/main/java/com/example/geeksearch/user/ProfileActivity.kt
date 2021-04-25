@@ -1,7 +1,8 @@
-package com.example.geeksearch
+package com.example.geeksearch.user
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.geeksearch.R
 
 class ProfileActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

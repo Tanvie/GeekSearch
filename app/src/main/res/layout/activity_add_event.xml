@@ -4,10 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFDBE9"
-    tools:context=".AddEventActivity">
+    tools:context=".organisation.AddEventActivity">
 
     <ScrollView
         android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
         android:layout_height="match_parent">
 
         <LinearLayout
@@ -36,7 +38,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:background="@drawable/edit_text_border"
-                android:hint="Hackathon Name"
+                android:hint="Hackathon Title"
                 android:padding="5dp" />
 
             <TextView
@@ -95,7 +97,7 @@
                 android:layout_marginTop="15dp"
                 android:background="@drawable/edit_text_border"
                 android:gravity="top|left"
-                android:hint="Elgibility"
+                android:hint="Eligibility"
                 android:lines="2"
                 android:padding="5dp" />
 
@@ -121,7 +123,7 @@
                     android:layout_margin="5dp"
                     android:layout_weight="2"
                     android:gravity="center"
-                    android:hint="Date"
+                    android:hint="DD/MM/YYYY"
                     android:inputType="date"
                     android:padding="5dp" />
 
@@ -150,7 +152,7 @@
                     android:layout_margin="5dp"
                     android:layout_weight="2"
                     android:gravity="center"
-                    android:hint="Date"
+                    android:hint="DD/MM/YYYY"
                     android:inputType="date"
                     android:padding="5dp" />
             </LinearLayout>
@@ -178,7 +180,7 @@
                     android:layout_margin="5dp"
                     android:layout_weight="2"
                     android:gravity="center"
-                    android:hint="Date"
+                    android:hint="DD/MM/YYYY"
                     android:inputType="date"
                     android:padding="5dp" />
             </LinearLayout>
@@ -205,8 +207,7 @@
                     android:layout_margin="5dp"
                     android:layout_weight="2"
                     android:gravity="center"
-                    android:hint="Date"
-
+                    android:hint="DD/MM/YYYY"
                     android:inputType="date"
                     android:padding="5dp" />
             </LinearLayout>
@@ -220,6 +221,17 @@
                 android:gravity="top|left"
                 android:hint="Prizes"
                 android:lines="3"
+                android:padding="5dp" />
+
+            <EditText
+                android:id="@+id/etEventRegLink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edit_text_border"
+                android:gravity="top|left"
+                android:hint="Add Registration Link"
+                android:lines="2"
                 android:padding="5dp" />
 
             <Button

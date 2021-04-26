@@ -1,4 +1,4 @@
-package com.example.geeksearch.organisation
+package com.example.geeksearch
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,8 +9,6 @@ import android.widget.EditText
 import android.widget.RadioButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.geeksearch.EventModel
-import com.example.geeksearch.R
 import com.google.firebase.database.FirebaseDatabase
 
 

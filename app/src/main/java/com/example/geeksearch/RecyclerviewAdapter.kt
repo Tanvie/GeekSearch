@@ -1,14 +1,16 @@
-package com.example.geeksearch.user
+package com.example.geeksearch
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.geeksearch.EventModel
-import com.example.geeksearch.R
 
-class RecyclerviewAdapter(private val eventModelList: ArrayList<EventModel>) :
+
+class RecyclerviewAdapter(
+    private val eventModelList: ArrayList<EventModel>,
+    private val listener: com.google.firebase.database.ValueEventListener
+) :
     RecyclerView.Adapter<RecyclerviewAdapter.MyViewHolder>() {
 
 
@@ -23,8 +25,6 @@ class RecyclerviewAdapter(private val eventModelList: ArrayList<EventModel>) :
         val currentItem = eventModelList[position]
         holder.hckTitle.text = currentItem.hckname
         holder.hckDomain.text = currentItem.domain
-
-
     }
 
     override fun getItemCount(): Int {
@@ -32,10 +32,24 @@ class RecyclerviewAdapter(private val eventModelList: ArrayList<EventModel>) :
     }
 
 
-    class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
+        View.OnClickListener {
         val hckTitle: TextView = itemView.findViewById(R.id.ha_rv_hck_title)
         val hckDomain: TextView = itemView.findViewById(R.id.ha_rv_hck_domain)
 
+        init {
+            itemView.setOnClickListener(this)
+        }
 
+        override fun onClick(p0: View?) {
+            val position = adapterPosition
+            if (position != RecyclerView.NO_POSITION) {
+                listener.onItemClick(position)
+            }
+        }
+    }
+
+    interface ValueEventListener {
+        fun onItemClick(position: Int)
     }
 }

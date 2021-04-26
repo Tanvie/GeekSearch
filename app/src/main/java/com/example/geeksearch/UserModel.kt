@@ -1,4 +1,4 @@
-package com.example.geeksearch.user
+package com.example.geeksearch
 
 class UserModel {
 

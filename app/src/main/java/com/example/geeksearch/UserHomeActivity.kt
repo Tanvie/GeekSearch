@@ -1,24 +1,20 @@
-package com.example.geeksearch.user
+package com.example.geeksearch
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.geeksearch.ChatActivity
-import com.example.geeksearch.EventModel
-import com.example.geeksearch.R
 import com.google.firebase.database.*
 
-
-class UserHomeActivity : AppCompatActivity() {
+class UserHomeActivity : AppCompatActivity(), ValueEventListener {
 
     private lateinit var dbref: DatabaseReference
     private lateinit var eventRecyclerview: RecyclerView
     private lateinit var eventModelArrayList: ArrayList<EventModel>
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,8 +28,6 @@ class UserHomeActivity : AppCompatActivity() {
 
         eventRecyclerview.layoutManager = LinearLayoutManager(this)
         eventRecyclerview.setHasFixedSize(true)
-
-
         eventModelArrayList = arrayListOf<EventModel>()
         getEventData()
 
@@ -52,8 +46,11 @@ class UserHomeActivity : AppCompatActivity() {
         haBtJoinTeam.setOnClickListener {
             startActivity(Intent(this@UserHomeActivity, JoinTeamActivity::class.java))
         }
+    }
 
-
+    fun onItemClick(position: Int) {
+        Toast.makeText(this, "Item clicked at position$position", Toast.LENGTH_SHORT).show()
+        val event = eventModelArrayList[position]
     }
 
     private fun getEventData() {
@@ -63,21 +60,25 @@ class UserHomeActivity : AppCompatActivity() {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()) {
                     for (eventSnapshot in snapshot.children) {
-
                         val event = eventSnapshot.getValue(EventModel::class.java)
                         eventModelArrayList.add(event!!)
                     }
-
-                    eventRecyclerview.adapter = RecyclerviewAdapter(eventModelArrayList)
+                    val adapter = RecyclerviewAdapter(eventModelArrayList, this)
+                    eventRecyclerview.adapter = adapter
                 }
             }
 
             override fun onCancelled(error: DatabaseError) {
                 TODO("Not yet implemented")
             }
-
         })
     }
 
+    override fun onDataChange(snapshot: DataSnapshot) {
+        TODO("Not yet implemented")
+    }
 
+    override fun onCancelled(error: DatabaseError) {
+        TODO("Not yet implemented")
+    }
 }

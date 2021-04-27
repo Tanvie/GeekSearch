@@ -41,7 +41,7 @@
                 android:id="@+id/recycler_view_event"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:listitem="@layout/list_layout" />
+                tools:listitem="@layout/recycler_event_list_items" />
 
             <Button
                 android:id="@+id/haBtChat"

@@ -1,7 +1,7 @@
 package com.example.geeksearch
 
 class EventModel {
-    lateinit var hckname: String
+    lateinit var hckName: String
     lateinit var hckDes: String
     lateinit var eligibity: String
     lateinit var regOpenDate: String
@@ -15,7 +15,7 @@ class EventModel {
     constructor()
 
     constructor(
-        hckname: String,
+        hckName: String,
         hckDes: String,
         eligibity: String,
         regOpenDate: String,
@@ -27,7 +27,7 @@ class EventModel {
         link: String
     ) : this() {
         this.hckDes = hckDes
-        this.hckname = hckname
+        this.hckName = hckName
         this.eligibity = eligibity
         this.regOpenDate = regOpenDate
         this.regCloseDate = regCloseDate

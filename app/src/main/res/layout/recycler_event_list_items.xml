@@ -28,7 +28,7 @@
                 android:paddingTop="10dp"
                 android:paddingEnd="10dp"
                 android:paddingBottom="10dp"
-                android:text="Name of the Orphanage"
+                android:text="Name of the Event"
                 android:textSize="20sp" />
 
             <TextView
@@ -39,7 +39,7 @@
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
                 android:paddingBottom="10dp"
-                android:text="City of the Orphanage"
+                android:text="Domain"
                 android:textSize="15sp" />
 
             <TextView
@@ -50,7 +50,7 @@
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
                 android:paddingBottom="10dp"
-                android:text="State of the Orphanage"
+                android:text="Registration Link"
                 android:textSize="15sp" />
 
         </RelativeLayout>

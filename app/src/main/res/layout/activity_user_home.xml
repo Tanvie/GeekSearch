@@ -37,12 +37,6 @@
             </LinearLayout>
 
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_view_event"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:listitem="@layout/recycler_event_list_items" />
-
             <Button
                 android:id="@+id/haBtChat"
                 android:layout_width="match_parent"
@@ -69,7 +63,26 @@
                 android:layout_marginTop="50dp"
                 android:layout_marginEnd="40dp"
                 android:text="Create team" />
+
+            <Button
+                android:id="@+id/btn_user_home_activity_event"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="40dp"
+                android:text="Events" />
+
+            <!--            <androidx.recyclerview.widget.RecyclerView-->
+            <!--                android:id="@+id/recycler_view_event"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                tools:listitem="@layout/recycler_event_list_items" />-->
+
+
         </LinearLayout>
+
+
     </RelativeLayout>
 
 

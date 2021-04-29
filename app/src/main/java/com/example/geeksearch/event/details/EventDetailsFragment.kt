@@ -24,9 +24,16 @@ class EventDetailsFragment : Fragment() {
         val st: EventModel? = arguments?.Event
 
         if (st != null) {
-            binding.name.text = st.name
-            binding.city.text = st.city
-            binding.state.text = st.state
+            binding.tvEventFragDetailsName.text = st.hckName
+            binding.tvEventFragDomain.text = st.domain
+            binding.tvEventFragLink.text = st.link
+            binding.tvEventFragDescription.text = st.hckDes
+            binding.tvEventFragRegStart.text = st.regOpenDate
+            binding.tvEventFragRegEnds.text = st.regCloseDate
+            binding.tvEventFragHckStart.text = st.hckStart
+            binding.tvEventFragHckEnds.text = st.hckEnd
+            binding.tvEventFragEligibility.text = st.eligibity
+            binding.tvEventFragPrizes.text = st.prizes
         }
         return view
     }

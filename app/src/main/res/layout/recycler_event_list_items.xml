@@ -21,7 +21,7 @@
 
 
             <TextView
-                android:id="@+id/tv_name_of_orphanage_firestore"
+                android:id="@+id/tv_event_list_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingStart="10dp"
@@ -32,10 +32,10 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/tv_city_of_orphanage_firestore"
+                android:id="@+id/tv_event_domain"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/tv_name_of_orphanage_firestore"
+                android:layout_below="@+id/tv_event_list_name"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
                 android:paddingBottom="10dp"
@@ -43,10 +43,10 @@
                 android:textSize="15sp" />
 
             <TextView
-                android:id="@+id/tv_state_of_orphanage_firestore"
+                android:id="@+id/tv_event_link"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/tv_city_of_orphanage_firestore"
+                android:layout_below="@+id/tv_event_domain"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
                 android:paddingBottom="10dp"

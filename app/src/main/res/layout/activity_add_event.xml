@@ -8,9 +8,9 @@
 
     <ScrollView
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="30dp"
-        android:layout_height="match_parent">
+        android:layout_marginBottom="30dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -105,16 +105,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:weightSum="3">
 
                 <TextView
                     android:id="@+id/textView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
+                    android:layout_weight="1"
                     android:padding="5dp"
                     android:text="Registration Opens"
                     android:textColor="@color/color_secondary" />
+
+                <ImageButton
+                    android:id="@+id/btnRegStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_date" />
 
                 <EditText
                     android:id="@+id/etRegOpen"
@@ -133,7 +142,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:layout_weight="2"
+                android:layout_weight="3"
                 android:orientation="horizontal">
 
                 <TextView
@@ -141,16 +150,24 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
+                    android:layout_weight="1"
                     android:padding="5dp"
                     android:text="Registration Close"
                     android:textColor="@color/color_secondary" />
+
+                <ImageButton
+                    android:id="@+id/btnRegEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_date" />
 
                 <EditText
                     android:id="@+id/etRegClose"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    android:layout_weight="2"
+                    android:layout_weight="1"
                     android:gravity="center"
                     android:hint="DD/MM/YYYY"
                     android:inputType="date"
@@ -172,6 +189,12 @@
                     android:padding="5dp"
                     android:text="Hackathon Start"
                     android:textColor="@color/color_secondary" />
+
+                <ImageButton
+                    android:id="@+id/btnHckStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_date" />
 
                 <EditText
                     android:id="@+id/ethckstr"
@@ -199,6 +222,12 @@
                     android:padding="5dp"
                     android:text="Hackathon End"
                     android:textColor="@color/color_secondary" />
+
+                <ImageButton
+                    android:id="@+id/btnHckEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_date" />
 
                 <EditText
                     android:id="@+id/ethckEnd"
@@ -242,8 +271,6 @@
                 android:background="#FF9190"
                 android:padding="5dp"
                 android:text="SUBMIT" />
-
-
         </LinearLayout>
 
     </ScrollView>

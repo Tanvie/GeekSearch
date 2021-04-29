@@ -9,7 +9,7 @@
         android:id="@+id/eventFragment"
         android:name="com.example.geeksearch.event.event.EventFragment"
         android:label="fragment_event"
-        tools:layout="@layout/fragment_event">
+        tools:layout="Event">
         <action
             android:id="@+id/action_eventFragment_to_eventDetailsFragment2"
             app:destination="@id/eventDetailsFragment2" />

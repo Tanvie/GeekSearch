@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.geeksearch.databinding.ActivityUserHomeBinding
+import com.example.geeksearch.event.EventActivity
 
 class UserHomeActivity : AppCompatActivity() {
 
@@ -32,6 +33,9 @@ class UserHomeActivity : AppCompatActivity() {
 
         binding.haBtJoinTeam.setOnClickListener {
             startActivity(Intent(this, JoinTeamActivity::class.java))
+        }
+        binding.btnUserHomeActivityEvent.setOnClickListener {
+            startActivity(Intent(this, EventActivity::class.java))
         }
     }
 

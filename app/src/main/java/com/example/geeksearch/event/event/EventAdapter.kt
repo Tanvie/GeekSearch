@@ -24,15 +24,15 @@ class EventAdapter(
         @NonNull itemView: View,
         onEventClickListener: OnEventClickListener
     ) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
-        private val name: TextView
-        private val city: TextView
-        private val state: TextView
+        private val hckName: TextView
+        private val domain: TextView
+        private val link: TextView
         private val onEventClickListener: OnEventClickListener
 
         init {
-            name = itemView.findViewById(R.id.tv_name_of_orphanage_firestore)
-            city = itemView.findViewById(R.id.tv_city_of_orphanage_firestore)
-            state = itemView.findViewById(R.id.tv_state_of_orphanage_firestore)
+            hckName = itemView.findViewById(R.id.tv_event_list_name)
+            domain = itemView.findViewById(R.id.tv_event_domain)
+            link = itemView.findViewById(R.id.tv_event_link)
 
             this.onEventClickListener = onEventClickListener
 
@@ -44,9 +44,9 @@ class EventAdapter(
         }
 
         fun bindEventData(eventModel: EventModel) {
-            name.text = eventModel.name
-            city.text = eventModel.city
-            state.text = eventModel.state
+            hckName.text = eventModel.hckName
+            domain.text = eventModel.domain
+            link.text = eventModel.link
         }
     }
 

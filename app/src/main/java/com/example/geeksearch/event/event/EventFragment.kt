@@ -54,7 +54,7 @@ class EventFragment : Fragment(), EventAdapter.OnEventClickListener {
 
 
         val query: Query = FirebaseFirestore.getInstance()
-            .collection("users")
+            .collection("Events")
 
         options = FirestoreRecyclerOptions.Builder<EventModel>()
             .setQuery(query, EventModel::class.java)

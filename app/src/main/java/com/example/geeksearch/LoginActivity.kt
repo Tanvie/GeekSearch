@@ -1,5 +1,6 @@
 package com.example.geeksearch
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.geeksearch.databinding.ActivityLoginBinding
@@ -15,11 +16,11 @@ class LoginActivity : AppCompatActivity() {
 //        val laBtLoginOrg = findViewById<ImageButton>(R.id.laBtLoginOrg)
 
 
-//        laBtLoginUser.setOnClickListener {
-//            startActivity(Intent(this, UserLoginActivity::class.java))
-//        }
-//        laBtLoginOrg.setOnClickListener {
-//            startActivity(Intent(this, OrgLoginActivity::class.java))
-//        }
+        binding.laBtLoginUser.setOnClickListener {
+            startActivity(Intent(this, UserLoginActivity::class.java))
+        }
+        binding.laBtLoginOrg.setOnClickListener {
+            startActivity(Intent(this, OrgLoginActivity::class.java))
+        }
     }
 }

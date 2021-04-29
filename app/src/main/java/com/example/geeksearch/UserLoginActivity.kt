@@ -56,7 +56,7 @@ class UserLoginActivity : AppCompatActivity() {
                                 baseContext, "Login Successful",
                                 Toast.LENGTH_LONG
                             ).show()
-                            startActivity(Intent(this, HomeActivity::class.java))
+                            startActivity(Intent(this, UserHomeActivity::class.java))
                         } else {
                             // If sign in fails, display a message to the user.
                             Toast.makeText(

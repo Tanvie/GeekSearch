@@ -83,7 +83,7 @@ class UserRegisterActivity : AppCompatActivity() {
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
 
-                            val user = User(
+                            val user = UserModel(
                                 userEmail,
                                 userName,
                                 userPhone,
@@ -100,7 +100,7 @@ class UserRegisterActivity : AppCompatActivity() {
                                         Toast.LENGTH_LONG
                                     ).show()
 
-                                    startActivity(Intent(this, HomeActivity::class.java))
+                                    startActivity(Intent(this, UserHomeActivity::class.java))
                                 }
                         } else {
                             Toast.makeText(

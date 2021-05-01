@@ -1,4 +1,4 @@
-package com.example.geeksearch
+package com.example.geeksearch.organisation
 
 class OrganisationModel {
 

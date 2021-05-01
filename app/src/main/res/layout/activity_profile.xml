@@ -7,13 +7,15 @@
     tools:context=".ProfileActivity">
 
     <EditText
-        android:id="@+id/Name"
+        android:id="@+id/txtName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
+        android:hint="Name"
         android:padding="20dp"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="24dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/Phone"
@@ -22,8 +24,8 @@
         android:hint="Phone No."
         android:inputType="textPhonetic"
         android:padding="20dp"
-        app:layout_constraintTop_toBottomOf="@+id/Name"
-        tools:layout_editor_absoluteX="20dp" />
+        app:layout_constraintTop_toBottomOf="@+id/txtName"
+        tools:layout_editor_absoluteX="0dp" />
 
     <EditText
         android:id="@+id/College"
@@ -74,7 +76,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/Name" />
+        app:layout_constraintTop_toTopOf="@+id/txtName" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

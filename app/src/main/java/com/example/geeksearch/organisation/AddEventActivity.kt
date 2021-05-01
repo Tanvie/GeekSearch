@@ -1,4 +1,4 @@
-package com.example.geeksearch
+package com.example.geeksearch.organisation
 
 import android.app.DatePickerDialog
 import android.content.Intent
@@ -8,6 +8,7 @@ import android.view.View
 import android.webkit.URLUtil
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import com.example.geeksearch.R
 import com.google.firebase.firestore.FirebaseFirestore
 import java.util.*
 import kotlin.collections.HashMap

@@ -54,7 +54,7 @@ class AddEventActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener
         } else if (rbthardware.isChecked) {
             domain = "Hardware"
         } else {
-            domain = "Both Hardware and Software"
+            domain = "Hardware and Software"
         }
 
         btnHckStart.setOnClickListener {

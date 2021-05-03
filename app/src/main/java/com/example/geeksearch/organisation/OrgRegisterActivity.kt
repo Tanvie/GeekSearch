@@ -8,8 +8,9 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.geeksearch.R
+import com.example.geeksearch.user.UserHomeActivity
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.firestore.FirebaseFirestore
 
 
 class OrgRegisterActivity : AppCompatActivity() {
@@ -17,8 +18,6 @@ class OrgRegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_org_register)
 
-        val database = FirebaseDatabase.getInstance()
-//        val myRef = database.getReference("organisations")
         var mAuth: FirebaseAuth = FirebaseAuth.getInstance()
 
         val orBtLogin = findViewById<Button>(R.id.orBtLogin)
@@ -65,18 +64,30 @@ class OrgRegisterActivity : AppCompatActivity() {
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
 
-                            val org = OrganisationModel(orgName, orgEmail, orgLocation, orgPassword)
+                            val db = FirebaseFirestore.getInstance()
+                            val org: MutableMap<String, Any> = HashMap()
+                            org["orgName"] = orgName
+                            org["orgEmail"] = orgEmail
+                            org["orgLocation"] = orgLocation
+                            org["orgPassword"] = orgPassword
 
-                            FirebaseDatabase.getInstance().getReference("organisations")
-                                .child(FirebaseAuth.getInstance().currentUser.uid)
-                                .setValue(org).addOnCompleteListener(this) {
-                                    Toast.makeText(
-                                        baseContext, "Registration Done",
-                                        Toast.LENGTH_SHORT
-                                    ).show()
-
-                                    startActivity(Intent(this, OrgHomeActivity::class.java))
+                            db.collection("Organisations")
+                                .add(org)
+                                .addOnSuccessListener {
+                                    Toast.makeText(this, "organisation added", Toast.LENGTH_SHORT)
+                                        .show()
+                                    startActivity(Intent(this, UserHomeActivity::class.java))
                                 }
+                                .addOnFailureListener {
+                                    Toast.makeText(
+                                        this,
+                                        "organisation failed to add",
+                                        Toast.LENGTH_SHORT
+                                    )
+                                        .show()
+                                }
+
+
                         } else {
                             Toast.makeText(
                                 baseContext, "Authentication failed.",

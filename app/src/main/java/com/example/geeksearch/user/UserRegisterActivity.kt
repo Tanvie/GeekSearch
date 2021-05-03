@@ -9,7 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.geeksearch.R
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.firestore.FirebaseFirestore
 
 class UserRegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -84,25 +84,27 @@ class UserRegisterActivity : AppCompatActivity() {
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
 
-                            val user = UserModel(
-                                userEmail,
-                                userName,
-                                userPhone,
-                                userLocation,
-                                userCollege,
-                                userDegree
-                            )
+                            val db = FirebaseFirestore.getInstance()
+                            val user: MutableMap<String, Any> = HashMap()
+                            user["userName"] = userName
+                            user["password"] = userPassword
+                            user["userDegree"] = userDegree
+                            user["userCollege"] = userCollege
+                            user["userLocation"] = userLocation
+                            user["userEmail"] = userEmail
+                            user["phoneNo"] = userPhone
 
-                            FirebaseDatabase.getInstance().getReference("users")
-                                .child(FirebaseAuth.getInstance().currentUser.uid)
-                                .setValue(user).addOnCompleteListener(this) {
-                                    Toast.makeText(
-                                        baseContext, "Registration Done",
-                                        Toast.LENGTH_LONG
-                                    ).show()
-
+                            db.collection("Users")
+                                .add(user)
+                                .addOnSuccessListener {
+                                    Toast.makeText(this, "user added", Toast.LENGTH_SHORT).show()
                                     startActivity(Intent(this, UserHomeActivity::class.java))
                                 }
+                                .addOnFailureListener {
+                                    Toast.makeText(this, "user failed to add", Toast.LENGTH_SHORT)
+                                        .show()
+                                }
+
                         } else {
                             Toast.makeText(
                                 baseContext, "Authentication failed.",
@@ -115,4 +117,5 @@ class UserRegisterActivity : AppCompatActivity() {
 
 
     }
+
 }

@@ -8,7 +8,6 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.geeksearch.R
-import com.example.geeksearch.user.UserHomeActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -76,7 +75,7 @@ class OrgRegisterActivity : AppCompatActivity() {
                                 .addOnSuccessListener {
                                     Toast.makeText(this, "organisation added", Toast.LENGTH_SHORT)
                                         .show()
-                                    startActivity(Intent(this, UserHomeActivity::class.java))
+                                    startActivity(Intent(this, OrgHomeActivity::class.java))
                                 }
                                 .addOnFailureListener {
                                     Toast.makeText(

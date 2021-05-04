@@ -2,6 +2,7 @@
     <string name="app_name">Geek Search</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
-
+    <string name="tvOrgHome1">Hackathons are proving grounds for new ideas. They’re especially good tools to stimulate the creative and problem-solving juices of developers.</string>
+    <string name="tvOrgHome2">Associating your brand with a hackathon can change the public’s perception of your brand.<br />Help acquire developer mind share.<br />It is an efficient way to deliver more awareness about your company to a prime, target audience –the maker community and increase brand exposure in the tech world.</string>
+    <string name="tvOrgHome3">Planning to host your hackathon?<br />Press the button below.<br /><p />BON VOYAGE !! </string>
 </resources>

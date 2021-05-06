@@ -87,10 +87,10 @@
                     android:layout_height="wrap_content"
                     android:autoLink="web"
                     android:clickable="true"
-                    android:padding="10dp"
                     android:focusable="true"
-                    android:textSize="15sp"
+                    android:padding="10dp"
                     android:text="@string/reglinkfromdb"
+                    android:textSize="15sp"
                     android:textStyle="italic" />
             </LinearLayout>
 

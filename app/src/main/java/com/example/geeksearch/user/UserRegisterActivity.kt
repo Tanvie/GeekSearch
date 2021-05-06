@@ -94,8 +94,9 @@ class UserRegisterActivity : AppCompatActivity() {
                             user["userEmail"] = userEmail
                             user["phoneNo"] = userPhone
                             user["linkedInLink"] = ""
-                            user["hackerrankLink"] = ""
-                            user["codechefLink"] = ""
+                            user["hackerRankLink"] = ""
+                            user["codeChefLink"] = ""
+                            user["userSkills"] = ""
 
                             db.collection("Users").document(userEmail)
                                 .set(user)

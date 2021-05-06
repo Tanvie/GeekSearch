@@ -19,7 +19,7 @@
         <activity android:name=".user.CreateTeamActivity" />
         <activity android:name=".user.JoinTeamActivity" />
         <activity android:name=".user.ChatActivity" />
-        <activity android:name=".ProfileActivity" />
+        <activity android:name=".user.UserProfileActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -50,7 +50,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
-                    android:text="DOMAIN :"
+                    android:text="@string/domain"
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
@@ -60,7 +60,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
-                    android:text="domainfromDB"
+                    android:text="@string/domainfromdb"
                     android:textSize="15sp"
                     android:textStyle="italic" />
             </LinearLayout>
@@ -77,7 +77,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
-                    android:text="REGISTER NOW:"
+                    android:text="@string/register_now"
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
@@ -85,10 +85,12 @@
                     android:id="@+id/tv_event_link"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:autoLink="web"
                     android:clickable="true"
                     android:padding="10dp"
-                    android:text="reglinkFromDB"
+                    android:focusable="true"
                     android:textSize="15sp"
+                    android:text="@string/reglinkfromdb"
                     android:textStyle="italic" />
             </LinearLayout>
 

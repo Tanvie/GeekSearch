@@ -79,7 +79,7 @@ class ProfileActivity : AppCompatActivity() {
 //        mDatabase.addValueEventListener(postListener)
 
         save.setOnClickListener {
-            val newUserEmail: String = "prathamesh.wavhal19@vit.edu"
+            //val newUserEmail: String = "prathamesh.wavhal19@vit.edu"
 
             newUserName=txtname.text.toString()
             newUserPhone=phone.text.toString()

@@ -15,6 +15,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
 
+
 class UserProfileActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,10 +41,8 @@ class UserProfileActivity : AppCompatActivity() {
         docRef.get()
             .addOnSuccessListener { document ->
                 if (document != null) {
-//                    Log.v("Document Data","${document.data}")
 
-
-                    var user: MutableMap<String, Any> = document.data as MutableMap<String, Any>
+                    val user: MutableMap<String, Any> = document.data as MutableMap<String, Any>
                     etUserClg.setText(user["userCollege"].toString())
                     etUserDegree.setText(user["userDegree"].toString())
                     tvUserName.text = user["userName"].toString()
@@ -56,14 +55,14 @@ class UserProfileActivity : AppCompatActivity() {
                     etUserSkills.setText(user["userSkills"].toString())
                     Toast.makeText(this, "Profile data fetched", Toast.LENGTH_SHORT).show()
                 } else {
-
+                    Toast.makeText(this, "Error in Fetching user!", Toast.LENGTH_SHORT).show()
                 }
             }
             .addOnFailureListener { exception ->
                 Toast.makeText(this, "User Failed to fetch!", Toast.LENGTH_SHORT).show()
             }
         etUserSkills.setOnClickListener {
-            Toast.makeText(this, "Enter comma separated values", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Enter comma separated values", Toast.LENGTH_LONG).show()
         }
         btnEditProfile.setOnClickListener {
             clicked += 1

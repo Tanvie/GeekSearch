@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
-import com.example.geeksearch.OrgProfileActivity
 import com.example.geeksearch.R
 
 class OrgHomeActivity : AppCompatActivity() {

@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GeekSearch">
-        <activity android:name=".OrgProfileActivity"></activity>
+        <activity android:name=".organisation.OrgProfileActivity"></activity>
         <activity android:name=".event.EventActivity" />
         <activity android:name=".user.UserRegisterActivity" />
         <activity android:name=".organisation.OrgRegisterActivity" />

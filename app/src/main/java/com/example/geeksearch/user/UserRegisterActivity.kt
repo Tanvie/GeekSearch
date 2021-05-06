@@ -93,6 +93,9 @@ class UserRegisterActivity : AppCompatActivity() {
                             user["userLocation"] = userLocation
                             user["userEmail"] = userEmail
                             user["phoneNo"] = userPhone
+                            user["linkedInLink"] = ""
+                            user["hackerrankLink"] = ""
+                            user["codechefLink"] = ""
 
                             db.collection("Users")
                                 .add(user)

@@ -19,7 +19,7 @@ import com.google.firebase.firestore.SetOptions
 class UserProfileActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_profile)
+        setContentView(R.layout.activity_user_profile)
 
         val tvUserName = findViewById<TextView>(R.id.tv_user_name)
         val tvUserEmail = findViewById<TextView>(R.id.tv_user_email)

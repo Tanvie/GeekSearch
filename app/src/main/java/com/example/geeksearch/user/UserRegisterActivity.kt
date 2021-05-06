@@ -97,8 +97,8 @@ class UserRegisterActivity : AppCompatActivity() {
                             user["hackerrankLink"] = ""
                             user["codechefLink"] = ""
 
-                            db.collection("Users")
-                                .add(user)
+                            db.collection("Users").document(userEmail)
+                                .set(user)
                                 .addOnSuccessListener {
                                     Toast.makeText(this, "user added", Toast.LENGTH_SHORT).show()
                                     startActivity(Intent(this, UserHomeActivity::class.java))

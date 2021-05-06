@@ -70,8 +70,8 @@ class OrgRegisterActivity : AppCompatActivity() {
                             org["orgLocation"] = orgLocation
                             org["orgPassword"] = orgPassword
 
-                            db.collection("Organisations")
-                                .add(org)
+                            db.collection("Organisations").document(orgEmail)
+                                .set(org)
                                 .addOnSuccessListener {
                                     Toast.makeText(this, "organisation added", Toast.LENGTH_SHORT)
                                         .show()

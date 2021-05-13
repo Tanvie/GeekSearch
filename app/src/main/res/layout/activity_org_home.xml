@@ -81,5 +81,11 @@
             android:textStyle="bold"
             android:typeface="sans"
             app:cornerRadius="18dp" />
+
+        <ImageButton
+            android:id="@+id/img_btn_org_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_baseline_person_24" />
     </LinearLayout>
 </RelativeLayout>

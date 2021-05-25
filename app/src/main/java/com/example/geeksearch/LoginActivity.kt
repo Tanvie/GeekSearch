@@ -2,23 +2,26 @@ package com.example.geeksearch
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
+import com.example.geeksearch.databinding.ActivityLoginBinding
+import com.example.geeksearch.organisation.OrgLoginActivity
+import com.example.geeksearch.user.UserLoginActivity
 
 class LoginActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityLoginBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val laBtLoginUser = findViewById<ImageButton>(R.id.laBtLoginUser)
-        val laBtLoginOrg = findViewById<ImageButton>(R.id.laBtLoginOrg)
+//        val laBtLoginUser = findViewById<ImageButton>(R.id.laBtLoginUser)
+//        val laBtLoginOrg = findViewById<ImageButton>(R.id.laBtLoginOrg)
 
 
-
-        laBtLoginUser.setOnClickListener {
+        binding.laBtLoginUser.setOnClickListener {
             startActivity(Intent(this, UserLoginActivity::class.java))
         }
-        laBtLoginOrg.setOnClickListener {
+        binding.laBtLoginOrg.setOnClickListener {
             startActivity(Intent(this, OrgLoginActivity::class.java))
         }
     }

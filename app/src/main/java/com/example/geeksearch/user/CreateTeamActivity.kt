@@ -1,11 +1,12 @@
-package com.example.geeksearch
+package com.example.geeksearch.user
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.geeksearch.R
 
-class ProfileActivity : AppCompatActivity() {
+class CreateTeamActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_profile)
+        setContentView(R.layout.activity_create_team)
     }
 }

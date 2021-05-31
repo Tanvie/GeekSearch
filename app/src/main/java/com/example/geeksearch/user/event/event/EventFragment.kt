@@ -1,4 +1,4 @@
-package com.example.geeksearch.event.event
+package com.example.geeksearch.user.event.event
 
 import android.os.Bundle
 import android.view.LayoutInflater

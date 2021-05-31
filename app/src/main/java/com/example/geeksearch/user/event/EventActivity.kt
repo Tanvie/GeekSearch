@@ -1,4 +1,4 @@
-package com.example.geeksearch.event
+package com.example.geeksearch.user.event
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

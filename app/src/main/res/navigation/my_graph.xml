@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/eventFragment"
-        android:name="com.example.geeksearch.event.event.EventFragment"
+        android:name="com.example.geeksearch.user.event.event.EventFragment"
         android:label="fragment_event"
         tools:layout="Event">
         <action
@@ -16,11 +16,11 @@
     </fragment>
     <fragment
         android:id="@+id/eventDetailsFragment2"
-        android:name="com.example.geeksearch.event.details.EventDetailsFragment"
+        android:name="com.example.geeksearch.user.event.details.EventDetailsFragment"
         android:label="fragment_event_details"
         tools:layout="@layout/fragment_event_details">
         <argument
             android:name="Event"
-            app:argType="com.example.geeksearch.event.event.EventModel" />
+            app:argType="com.example.geeksearch.user.event.event.EventModel" />
     </fragment>
 </navigation>

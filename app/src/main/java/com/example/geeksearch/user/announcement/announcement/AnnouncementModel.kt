@@ -1,12 +1,10 @@
-package com.example.geeksearch.event.event
+package com.example.geeksearch.user.announcement.announcement
 
 import android.os.Parcel
 import android.os.Parcelable
 
-/**
- * Created by Tanvi Wakade on 28-04-2021.
- */
-class EventModel() : Parcelable {
+
+class AnnouncementModel() : Parcelable {
     lateinit var hckName: String
     lateinit var hckDes: String
     lateinit var eligibity: String
@@ -48,14 +46,14 @@ class EventModel() : Parcelable {
         return 0
     }
 
-    companion object CREATOR : Parcelable.Creator<EventModel> {
-        override fun createFromParcel(parcel: Parcel): EventModel {
-            return EventModel(parcel)
+    companion object CREATOR : Parcelable.Creator<AnnouncementModel> {
+        override fun createFromParcel(parcel: Parcel): AnnouncementModel {
+            return AnnouncementModel(parcel)
         }
 
-        override fun newArray(size: Int): Array<EventModel?> {
+        override fun newArray(size: Int): Array<AnnouncementModel?> {
             return arrayOfNulls(size)
         }
     }
-}
 
+}

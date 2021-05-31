@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".user.UserHomeActivity">
+    tools:context=".user.user.UserHomeActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -23,34 +23,6 @@
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/ic_baseline_person_24" />
 
-
-            <Button
-                android:id="@+id/haBtChat"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="40dp"
-                android:text="skip to chat activity" />
-
-            <Button
-                android:id="@+id/haBtJoinTeam"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="40dp"
-                android:text="Join team" />
-
-            <Button
-                android:id="@+id/haBtCreateTeam"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="50dp"
-                android:layout_marginEnd="40dp"
-                android:text="Create team" />
-
             <Button
                 android:id="@+id/btn_user_home_activity_event"
                 android:layout_width="match_parent"
@@ -59,6 +31,15 @@
                 android:layout_marginTop="50dp"
                 android:layout_marginEnd="40dp"
                 android:text="Events" />
+
+            <Button
+                android:id="@+id/btn_user_home_activity_announcement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="40dp"
+                android:text="Announcement" />
 
 
         </LinearLayout>

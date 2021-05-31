@@ -1,4 +1,4 @@
-package com.example.geeksearch.user
+package com.example.geeksearch.user.user.auth
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,6 +8,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.geeksearch.R
+import com.example.geeksearch.user.user.UserHomeActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase

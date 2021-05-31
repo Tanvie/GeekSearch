@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.geeksearch.databinding.ActivityLoginBinding
 import com.example.geeksearch.organisation.OrgLoginActivity
-import com.example.geeksearch.user.UserLoginActivity
+import com.example.geeksearch.user.user.auth.UserLoginActivity
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding

@@ -9,18 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GeekSearch">
-        <activity android:name=".organisation.OrgProfileActivity"></activity>
-        <activity android:name=".event.EventActivity" />
-        <activity android:name=".user.UserRegisterActivity" />
+        <activity android:name=".user.announcement.AnnouncementActivity"></activity>
+        <activity android:name=".user.announcement.create.CreateAnnouncementActivity" />
+        <activity android:name=".organisation.OrgProfileActivity" />
+        <activity android:name=".user.event.EventActivity" />
+        <activity android:name=".user.user.auth.UserRegisterActivity" />
         <activity android:name=".organisation.OrgRegisterActivity" />
         <activity android:name=".organisation.AddEventActivity" />
         <activity android:name=".organisation.OrgHomeActivity" />
-        <activity android:name=".user.UserLoginActivity" />
+        <activity android:name=".user.user.auth.UserLoginActivity" />
         <activity android:name=".organisation.OrgLoginActivity" />
-        <activity android:name=".user.CreateTeamActivity" />
-        <activity android:name=".user.JoinTeamActivity" />
-        <activity android:name=".user.ChatActivity" />
-        <activity android:name=".user.UserProfileActivity" />
+        <activity android:name=".user.user.profile.UserProfileActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,7 +27,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".user.UserHomeActivity" />
+        <activity android:name=".user.user.UserHomeActivity" />
     </application>
 
 </manifest>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".user.announcement.details.AnnouncementDetailsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <Button
+        android:id="@+id/btn_mail_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mail To" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="An Fragment Details"
+        android:textAlignment="center"
+        android:textSize="50dp" />
+
+
+</FrameLayout>

@@ -5,7 +5,6 @@
     android:id="@+id/rv_firestore_items"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFB6C1"
     tools:listitem="@layout/recycler_event_list_items">
 
 </androidx.recyclerview.widget.RecyclerView>

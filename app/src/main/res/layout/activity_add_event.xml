@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFDBE9"
     tools:context=".organisation.AddEventActivity">
 
-    <ScrollView
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="30dp">
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical"
+        android:outlineProvider="background"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp">
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/textView0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="EVENT FORM"
+            android:textColor="@color/color_ascent"
+            android:textSize="20dp" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:orientation="vertical"
-            android:outlineProvider="background"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp">
-
-            <TextView
-                android:id="@+id/textView0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:padding="10dp"
-                android:text="EVENT FORM"
-                android:textColor="@color/color_secondary"
-                android:textSize="20dp" />
+            android:layout_height="wrap_content">
 
             <EditText
                 android:id="@+id/ethackName"
@@ -41,43 +41,56 @@
                 android:hint="Hackathon Title"
                 android:padding="5dp" />
 
-            <TextView
-                android:id="@+id/textView1"
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginTop="15dp"
+            android:padding="5dp"
+            android:text="SELECT HACKATHON DOMAIN"
+            android:textColor="@color/color_ascent" />
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+
+            <RadioButton
+                android:id="@+id/rbsoftware"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:padding="5dp"
-                android:text="SELECT HACKATHON DOMAIN"
-                android:textColor="@color/color_secondary" />
-
-            <RadioGroup
-                android:id="@+id/radio_group"
-                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:onClick="onRadioButtonClicked"
+                android:layout_weight="1"
+                android:text="Software" />
 
-
-                <RadioButton
-                    android:id="@+id/rbsoftware"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:onClick="onRadioButtonClicked"
-                    android:text="Software" />
-
-                <RadioButton
+            <RadioButton
                     android:id="@+id/rbhardware"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:onClick="onRadioButtonClicked"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="onRadioButtonClicked"
                     android:text="Hardware" />
 
-                <RadioButton
-                    android:id="@+id/rbBoth"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:onClick="onRadioButtonClicked"
-                    android:text="Both" />
-            </RadioGroup>
+            <RadioButton
+                android:id="@+id/rbBoth"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="onRadioButtonClicked"
+                android:text="Both" />
+        </RadioGroup>
+
+        <!--            Description of PS-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
             <EditText
                 android:id="@+id/ethackDescrip"
@@ -90,6 +103,13 @@
                 android:lines="5"
                 android:padding="5dp" />
 
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--            Eligibility-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
             <EditText
                 android:id="@+id/etEligibility"
                 android:layout_width="match_parent"
@@ -100,6 +120,7 @@
                 android:hint="Eligibility"
                 android:lines="2"
                 android:padding="5dp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -109,13 +130,14 @@
 
                 <TextView
                     android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textAlignment="center"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:layout_weight="1"
                     android:padding="5dp"
                     android:text="REGISTRATION DATES"
-                    android:textColor="@color/color_secondary" />
+                    android:textColor="@color/color_ascent" />
 
             </LinearLayout>
 
@@ -130,6 +152,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:backgroundTint="@color/white"
                     android:src="@drawable/ic_date" />
 
                 <EditText
@@ -160,6 +183,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:backgroundTint="@color/white"
                     android:src="@drawable/ic_date" />
 
                 <EditText
@@ -182,12 +206,13 @@
 
                 <TextView
                     android:id="@+id/textView4"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textAlignment="center"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:padding="5dp"
                     android:text="HACKATHON DATES"
-                    android:textColor="@color/color_secondary" />
+                    android:textColor="@color/color_ascent" />
 
             </LinearLayout>
 
@@ -202,6 +227,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:backgroundTint="@color/white"
                     android:src="@drawable/ic_date" />
 
                 <EditText
@@ -232,6 +258,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:backgroundTint="@color/white"
                     android:src="@drawable/ic_date" />
 
                 <EditText
@@ -247,6 +274,11 @@
 
             </LinearLayout>
 
+        <!--            Prizes-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
             <EditText
                 android:id="@+id/etPrizes"
                 android:layout_width="match_parent"
@@ -257,6 +289,13 @@
                 android:hint="Prizes"
                 android:lines="3"
                 android:padding="5dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--            Add Registration Link-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
             <EditText
                 android:id="@+id/etEventRegLink"
@@ -268,16 +307,16 @@
                 android:hint="Add Registration Link"
                 android:lines="2"
                 android:padding="5dp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-            <Button
-                android:id="@+id/btSubmit"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:background="#FF9190"
-                android:padding="5dp"
-                android:text="SUBMIT" />
-        </LinearLayout>
 
-    </ScrollView>
-</RelativeLayout>
+        <Button
+            android:id="@+id/btSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded_button"
+            android:padding="5dp"
+            android:text="SUBMIT" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -9,9 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GeekSearch">
-        <activity android:name=".user.announcement.AnnouncementActivity"></activity>
+        <activity android:name=".user.announcement.AnnouncementActivity" />
         <activity android:name=".user.announcement.create.CreateAnnouncementActivity" />
-        <activity android:name=".organisation.OrgProfileActivity" />
         <activity android:name=".user.event.EventActivity" />
         <activity android:name=".user.user.auth.UserRegisterActivity" />
         <activity android:name=".organisation.OrgRegisterActivity" />

@@ -100,7 +100,7 @@
                 android:layout_marginStart="13dp"
                 android:layout_weight="1"
                 android:textColor="@color/color_ascent"
-                android:text="RegisterHere"
+                android:text="Register Here"
                 android:textSize="18sp" />
 
         </LinearLayout>

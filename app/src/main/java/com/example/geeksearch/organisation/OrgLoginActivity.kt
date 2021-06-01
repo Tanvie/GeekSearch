@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.geeksearch.R
@@ -18,7 +19,7 @@ class OrgLoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_org_login)
 
 //        val laBtSkip = findViewById<Button>(R.id.laBtSkip)
-        val olBtRegister = findViewById<Button>(R.id.tv_organisation_login_register)
+        val olBtRegister = findViewById<TextView>(R.id.tv_organisation_login_register)
         val olBtLogin = findViewById<Button>(R.id.btn_organisation_login)
         val et_login_mail = findViewById<EditText>(R.id.et_organisation_login_email)
         val et_login_password = findViewById<EditText>(R.id.et_organisation_login_password)

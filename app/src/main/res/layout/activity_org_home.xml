@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFE6EE"
     tools:context=".organisation.OrgHomeActivity">
 
     <LinearLayout
@@ -20,7 +19,7 @@
             android:layout_margin="5dp"
             android:gravity="center"
             android:text="WELCOME TO GEEKSEARCH"
-            android:textColor="#CD5E77"
+            android:textColor="@color/color_ascent"
             android:textSize="23sp"
             android:textStyle="bold" />
 
@@ -30,7 +29,7 @@
             android:layout_gravity="left"
             android:layout_margin="5dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/text_view_box"
+            android:background="@drawable/rounded_button"
             android:padding="10dp"
             android:text="@string/tvOrgHome1"
             android:textColor="#FFFFFF"
@@ -43,7 +42,7 @@
             android:layout_gravity="right"
             android:layout_margin="5dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/text_view_box"
+            android:background="@drawable/rounded_button"
             android:padding="10dp"
             android:text="@string/tvOrgHome2"
             android:textAlignment="textEnd"
@@ -58,7 +57,7 @@
             android:layout_gravity="left"
             android:layout_margin="5dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/text_view_box"
+            android:background="@drawable/rounded_button"
             android:padding="10dp"
             android:text="@string/tvOrgHome3"
             android:textColor="#FFFFFF"
@@ -71,21 +70,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginTop="20dp"
             android:layout_margin="10dp"
-            android:backgroundTint="#ffbfc3"
-            android:drawableLeft="@drawable/ic_round_add_alert_24"
+            android:backgroundTint="@color/color_ascent"
             android:fontFamily="sans-serif-medium"
             android:text="ADD EVENT"
-            android:textColor="#CD5E77"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            android:typeface="sans"
+            android:textSize="20sp"
             app:cornerRadius="18dp" />
-
-        <ImageButton
-            android:id="@+id/img_btn_org_profile"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_baseline_person_24" />
     </LinearLayout>
 </RelativeLayout>

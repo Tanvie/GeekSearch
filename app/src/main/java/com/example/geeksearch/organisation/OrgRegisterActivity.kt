@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.geeksearch.R
@@ -19,12 +20,12 @@ class OrgRegisterActivity : AppCompatActivity() {
 
         var mAuth: FirebaseAuth = FirebaseAuth.getInstance()
 
-        val orBtLogin = findViewById<Button>(R.id.orBtLogin)
-        val orEdName = findViewById<EditText>(R.id.orEtName)
-        val orEdMail = findViewById<EditText>(R.id.orEdMail)
-        val orEdPassword = findViewById<EditText>(R.id.orEdPassword)
-        val orEdLocation = findViewById<EditText>(R.id.orEdLocation)
-        val orBtRegister = findViewById<Button>(R.id.orBtRegister)
+        val orBtLogin = findViewById<TextView>(R.id.tv_organisation_registration_login)
+        val orEdName = findViewById<EditText>(R.id.et_organisation_registration_name)
+        val orEdMail = findViewById<EditText>(R.id.et_organisation_registration_email)
+        val orEdPassword = findViewById<EditText>(R.id.et_organisation_registration_password)
+        val orEdLocation = findViewById<EditText>(R.id.et_organisation_registration_location)
+        val orBtRegister = findViewById<Button>(R.id.btn_organisation_registration_register)
 
 
         orBtLogin.setOnClickListener {

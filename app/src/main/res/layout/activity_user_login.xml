@@ -16,11 +16,11 @@
         android:orientation="vertical"
         android:paddingBottom="30dp">
 
-
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
+            android:scaleType="fitCenter"
             android:src="@drawable/logo" />
 
 
@@ -34,7 +34,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="10dp"
             android:hint="Email">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -53,7 +53,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="10dp"
             android:hint="Password">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -76,30 +76,30 @@
             android:layout_marginStart="50dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="50dp"
-            android:background="#FF9190"
+            android:background="@drawable/rounded_button"
             android:text="Login" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:orientation="horizontal"
             android:weightSum="2">
 
             <TextView
                 android:id="@+id/textView2"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Don't Have A Account?" />
-
 
             <TextView
                 android:id="@+id/tv_user_login_register"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="13dp"
                 android:layout_weight="1"
+                android:textColor="@color/color_ascent"
                 android:text="RegisterHere"
                 android:textSize="18sp" />
 

@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.geeksearch.R
@@ -20,16 +21,15 @@ class UserRegisterActivity : AppCompatActivity() {
 
         val mAuth: FirebaseAuth = FirebaseAuth.getInstance()
 
-        val urBtLogin = findViewById<Button>(R.id.urBtLogin)
-        val urBtRegister = findViewById<Button>(R.id.urBtRegister)
-
-        val urEdMail = findViewById<EditText>(R.id.urEdMail)
-        val urEdPassword = findViewById<EditText>(R.id.urEdPassword)
-        val urEdName = findViewById<EditText>(R.id.urEdName)
-        val urEdPhoneNo = findViewById<EditText>(R.id.urEdPhoneNo)
-        val urEdLocation = findViewById<EditText>(R.id.urEdLocation)
-        val urEdCollege = findViewById<EditText>(R.id.urEdCollege)
-        val urEdDegree = findViewById<EditText>(R.id.urEdDegree)
+        val urBtLogin = findViewById<TextView>(R.id.tv_user_register_login)
+        val urBtRegister = findViewById<Button>(R.id.btn_user_register_register)
+        val urEdMail = findViewById<EditText>(R.id.et_user_register_email)
+        val urEdPassword = findViewById<EditText>(R.id.et_user_register_password)
+        val urEdName = findViewById<EditText>(R.id.et_user_register_name)
+        val urEdPhoneNo = findViewById<EditText>(R.id.et_user_register_phone_number)
+        val urEdLocation = findViewById<EditText>(R.id.et_user_register_location)
+        val urEdCollege = findViewById<EditText>(R.id.et_user_register_college)
+        val urEdDegree = findViewById<EditText>(R.id.et_user_register_degree)
 
         urBtLogin.setOnClickListener {
             startActivity(Intent(this, UserLoginActivity::class.java))

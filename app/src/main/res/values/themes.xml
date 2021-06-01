@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.GeekSearch" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/color_secondary</item>
+        <item name="colorPrimary">#FF8A00</item>
         <item name="colorPrimaryVariant">@color/color_ascent</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->

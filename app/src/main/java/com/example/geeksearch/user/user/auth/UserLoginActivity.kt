@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.geeksearch.R
@@ -18,15 +19,15 @@ class UserLoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_login)
 
-        val ulBtRegistration = findViewById<Button>(R.id.ulBtRegistration)
+        val tv_user_login_register = findViewById<TextView>(R.id.tv_user_login_register)
         val ulBtLogin = findViewById<Button>(R.id.ulBtLogin)
 
-        val ulMail = findViewById<EditText>(R.id.ulEdMail)
-        val ulPassword = findViewById<EditText>(R.id.ulEdPassword)
+        val ulMail = findViewById<EditText>(R.id.et_user_login_email)
+        val ulPassword = findViewById<EditText>(R.id.et_user_login_password)
 
         val mauth: FirebaseAuth = Firebase.auth
 
-        ulBtRegistration.setOnClickListener {
+        tv_user_login_register.setOnClickListener {
             startActivity(Intent(this, UserRegisterActivity::class.java))
         }
 

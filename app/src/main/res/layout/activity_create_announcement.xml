@@ -6,13 +6,196 @@
     tools:context=".user.announcement.create.CreateAnnouncementActivity">
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Create Activity announcement"
-        android:textSize="20sp">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp">
 
-    </TextView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical"
+            android:outlineProvider="background"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp">
+
+            <TextView
+                android:id="@+id/textView0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="CREATE AN ANNOUNCEMENT"
+                android:textColor="@color/color_secondary"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/et_user_ann_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edit_text_border"
+                android:hint="Your Full Name"
+                android:padding="5dp" />
+
+            <EditText
+                android:id="@+id/et_user_ann_hack_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edit_text_border"
+                android:hint="Hackathon Title"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:padding="5dp"
+                android:text="SELECT HACKATHON DOMAIN"
+                android:textColor="@color/color_secondary" />
+
+            <RadioGroup
+                android:id="@+id/user_ann_radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <RadioButton
+                    android:id="@+id/rb_user_ann_hack_software"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="Software" />
+
+                <RadioButton
+                    android:id="@+id/rb_user_ann_hack_hardware"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="Hardware" />
+
+                <RadioButton
+                    android:id="@+id/rb_user_ann_hack_both"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="Both" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/et_user_ann_requirements"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edit_text_border"
+                android:gravity="top|left"
+                android:hint="Requirements"
+                android:lines="5"
+                android:padding="5dp" />
+
+            <EditText
+                android:id="@+id/et_user_ann_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edit_text_border"
+                android:gravity="top|left"
+                android:hint="Message for Announcement"
+                android:lines="5"
+                android:padding="5dp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="EVENT DATES"
+                    android:textColor="@color/color_secondary" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/img_btn_user_ann_start_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_date" />
+
+                <EditText
+                    android:id="@+id/et_user_ann_hack_start_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:hint="DD/MM/YYYY"
+                    android:inputType="date"
+                    android:padding="5dp" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="2"
+                    android:padding="5dp"
+                    android:text="TO"
+                    android:textColor="@color/color_secondary"
+                    android:textSize="15sp" />
+
+
+                <ImageButton
+                    android:id="@+id/img_btn_user_ann_end_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_date" />
+
+                <EditText
+                    android:id="@+id/et_user_ann_hack_end_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:hint="DD/MM/YYYY"
+                    android:inputType="date"
+                    android:padding="5dp" />
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btn_user_ann_create_ann"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="#FF9190"
+                android:padding="5dp"
+                android:text="SUBMIT" />
+        </LinearLayout>
+
+    </ScrollView>
+
 
 </RelativeLayout>

@@ -79,4 +79,7 @@ dependencies {
     // This library isused to populate firestore data into recycler-view
     def firebase_ui_version = "7.1.1"
     implementation "com.firebaseui:firebase-ui-firestore:$firebase_ui_version"
+
+    implementation 'de.cketti.mailto:email-intent-builder:2.0.0'
+
 }

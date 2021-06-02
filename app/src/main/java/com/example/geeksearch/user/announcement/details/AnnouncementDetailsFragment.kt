@@ -4,10 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.geeksearch.databinding.FragmentAnnouncementDetailsBinding
 import com.example.geeksearch.user.announcement.announcement.AnnouncementModel
+import de.cketti.mailto.EmailIntentBuilder
+
 
 class AnnouncementDetailsFragment : Fragment() {
     private var _binding: FragmentAnnouncementDetailsBinding? = null
@@ -36,7 +37,15 @@ class AnnouncementDetailsFragment : Fragment() {
         }
 
         binding.btnMailTo.setOnClickListener {
-            Toast.makeText(activity, "Mail to clicked", Toast.LENGTH_SHORT).show()
+            val success: Boolean = ann?.let { it1 ->
+                activity?.let { it2 ->
+                    EmailIntentBuilder.from(it2)
+                        .to(it1.userEmail)
+                        .subject("About Announcement on GeekSearch about: " + ann.hackName)
+                        .body("")
+                        .start()
+                }
+            } == true
         }
         return view
     }

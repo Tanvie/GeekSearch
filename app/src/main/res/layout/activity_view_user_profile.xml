@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="40dp"
-    tools:context=".user.user.profile.UserProfileActivity">
+    tools:context=".ViewUserProfile">
 
 
     <LinearLayout
@@ -15,7 +15,7 @@
 
 
         <TextView
-            android:id="@+id/tv_user_name"
+            android:id="@+id/tv_inviter_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -29,7 +29,7 @@
 
 
         <TextView
-            android:id="@+id/tv_user_email"
+            android:id="@+id/tv_inviter_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -44,8 +44,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <EditText
-                android:id="@+id/et_user_phone_no"
+            <TextView
+                android:id="@+id/tv_inviter_phone_no"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/white"
@@ -63,8 +63,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <EditText
-                android:id="@+id/et_user_clg"
+            <TextView
+                android:id="@+id/tv_inviter_clg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/white"
@@ -82,8 +82,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <EditText
-                android:id="@+id/et_user_degree"
+            <TextView
+                android:id="@+id/tv_inviter_degree"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/white"
@@ -101,8 +101,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <EditText
-                android:id="@+id/et_user_location"
+            <TextView
+                android:id="@+id/tv_inviter_location"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/white"
@@ -120,8 +120,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <EditText
-                android:id="@+id/et_user_skills"
+            <TextView
+                android:id="@+id/tv_inviter_skills"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/white"
@@ -139,15 +139,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <EditText
-                android:id="@+id/et_user_linkedIn"
+            <TextView
+                android:id="@+id/tv_inviter_linkedIn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:autoLink="web"
                 android:backgroundTint="@color/white"
-                android:clickable="false"
-                android:focusable="false"
-                android:focusableInTouchMode="false"
+                android:clickable="true"
+                android:focusable="true"
                 android:hint="LinkedIn Profile Link"
                 android:inputType="none" />
 
@@ -158,15 +157,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <EditText
-                android:id="@+id/et_user_codechef"
+            <TextView
+                android:id="@+id/tv_inviter_codechef"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:autoLink="web"
                 android:backgroundTint="@color/white"
-                android:clickable="false"
-                android:focusable="false"
-                android:focusableInTouchMode="false"
+                android:clickable="true"
+                android:focusable="true"
                 android:hint="Code Chef Profile Link"
                 android:inputType="none" />
 
@@ -177,27 +175,26 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <EditText
-                android:id="@+id/et_user_hackerrank"
+            <TextView
+                android:id="@+id/tv_inviter_hackerrank"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:autoLink="web"
                 android:backgroundTint="@color/white"
-                android:clickable="false"
-                android:focusable="false"
-                android:focusableInTouchMode="false"
+                android:clickable="true"
+                android:focusable="true"
                 android:hint="Hacker Rank Profile Link"
                 android:inputType="none" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/bt_user_edit_profile"
+            android:id="@+id/btn_inviter_mail_to"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@drawable/rounded_button"
-            android:text="Edit Profile" />
+            android:text="Send an Email" />
 
 
     </LinearLayout>

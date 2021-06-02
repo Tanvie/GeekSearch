@@ -66,8 +66,8 @@ class EventFragment : Fragment(), EventAdapter.OnEventClickListener {
 
     private fun setupParentList() {
         adapter = EventAdapter(this, options)
-        binding.rvFirestoreItems.layoutManager = LinearLayoutManager(activity)
-        binding.rvFirestoreItems.adapter = adapter
+        binding.rvAnnouncement.layoutManager = LinearLayoutManager(activity)
+        binding.rvAnnouncement.adapter = adapter
     }
 
     override fun onEventClick(Event: EventModel) {

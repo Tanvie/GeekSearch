@@ -8,6 +8,7 @@
     <string name="reglinkfromdb">reglinkFromDB</string>
     <string name="register_now">REGISTER NOW!</string>
     <string name="domainfromdb">domainfromDB</string>
-    <string name="domain">DOMAIN :</string>
+    <string name="domain">DOMAIN</string>
     <string name="linkfromdb">linkfromdb</string>
+    <string name="default_string">--</string>
 </resources>

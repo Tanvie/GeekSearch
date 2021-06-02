@@ -9,9 +9,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         android:layout_gravity="center_horizontal"
         android:layout_marginHorizontal="30dp"
-        android:layout_centerInParent="true"
         android:layout_marginTop="20dp"
         android:gravity="center_horizontal"
         android:orientation="vertical"
@@ -89,18 +89,18 @@
             android:weightSum="2">
 
             <TextView
-                android:layout_weight="1"
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="Don't Have A Account?" />
 
 
             <TextView
                 android:id="@+id/tv_organisation_login_register"
-                android:layout_marginStart="13dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
                 android:layout_weight="1"
                 android:text="Register Here"
                 android:textColor="@color/color_ascent"

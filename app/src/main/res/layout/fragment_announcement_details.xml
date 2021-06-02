@@ -1,24 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".user.announcement.details.AnnouncementDetailsFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <Button
-        android:id="@+id/btn_mail_to"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Mail To" />
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="An Fragment Details"
-        android:textAlignment="center"
-        android:textSize="50dp" />
+        android:orientation="vertical">
 
 
-</FrameLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Announcement Fragment Details"
+            android:textAlignment="center"
+            android:textSize="50dp" />
+
+        <TextView
+            android:id="@+id/tv_ann_details_hack_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hack Name" />
+
+        <TextView
+            android:id="@+id/tv_ann_details_hack_domain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hack domain" />
+
+        <TextView
+            android:id="@+id/tv_ann_details_hack_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hack start" />
+
+        <TextView
+            android:id="@+id/tv_ann_details_hack_end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hack end" />
+
+        <TextView
+            android:id="@+id/tv_ann_details_hack_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="User Name" />
+
+        <TextView
+            android:id="@+id/tv_ann_details_hack_user_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="User Email" />
+
+        <TextView
+            android:id="@+id/tv_ann_details_hack_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hack message" />
+
+        <TextView
+            android:id="@+id/tv_ann_details_hack_requirements"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hack requirements" />
+
+        <Button
+            android:id="@+id/btn_mail_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mail To" />
+    </LinearLayout>
+
+
+</RelativeLayout>

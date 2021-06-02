@@ -4,42 +4,38 @@ import android.os.Parcel
 import android.os.Parcelable
 
 
+
 class AnnouncementModel() : Parcelable {
-    lateinit var hckName: String
-    lateinit var hckDes: String
-    lateinit var eligibity: String
-    lateinit var regOpenDate: String
-    lateinit var regCloseDate: String
-    lateinit var hckStart: String
-    lateinit var hckEnd: String
-    lateinit var prizes: String
-    lateinit var domain: String
-    lateinit var link: String
+
+    lateinit var hackDomain: String
+    lateinit var hackEnd: String
+    lateinit var hackName: String
+    lateinit var hackStart: String
+    lateinit var message: String
+    lateinit var requirements: String
+    lateinit var userEmail: String
+    lateinit var userName: String
 
     constructor(parcel: Parcel) : this() {
-        hckName = parcel.readString().toString()
-        hckDes = parcel.readString().toString()
-        eligibity = parcel.readString().toString()
-        regOpenDate = parcel.readString().toString()
-        regCloseDate = parcel.readString().toString()
-        hckStart = parcel.readString().toString()
-        hckEnd = parcel.readString().toString()
-        prizes = parcel.readString().toString()
-        domain = parcel.readString().toString()
-        link = parcel.readString().toString()
+        hackDomain = parcel.readString().toString()
+        hackEnd = parcel.readString().toString()
+        hackName = parcel.readString().toString()
+        hackStart = parcel.readString().toString()
+        message = parcel.readString().toString()
+        requirements = parcel.readString().toString()
+        userEmail = parcel.readString().toString()
+        userName = parcel.readString().toString()
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
-        parcel.writeString(hckName)
-        parcel.writeString(hckDes)
-        parcel.writeString(eligibity)
-        parcel.writeString(regOpenDate)
-        parcel.writeString(regCloseDate)
-        parcel.writeString(hckStart)
-        parcel.writeString(hckEnd)
-        parcel.writeString(prizes)
-        parcel.writeString(domain)
-        parcel.writeString(link)
+        parcel.writeString(hackDomain)
+        parcel.writeString(hackEnd)
+        parcel.writeString(hackName)
+        parcel.writeString(hackStart)
+        parcel.writeString(message)
+        parcel.writeString(requirements)
+        parcel.writeString(userEmail)
+        parcel.writeString(userName)
     }
 
     override fun describeContents(): Int {
@@ -55,5 +51,6 @@ class AnnouncementModel() : Parcelable {
             return arrayOfNulls(size)
         }
     }
+
 
 }

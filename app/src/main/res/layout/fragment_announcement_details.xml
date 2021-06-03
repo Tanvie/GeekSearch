@@ -15,6 +15,7 @@
         android:layout_marginBottom="20dp"
         android:text="Find More about the team"
         android:textAlignment="center"
+        android:textAllCaps="true"
         android:textColor="@color/color_ascent"
         android:textSize="24sp" />
 

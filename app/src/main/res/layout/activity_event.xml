@@ -7,6 +7,9 @@
     android:orientation="vertical"
     tools:context=".user.event.EventActivity">
 
+    <!--    &#45;&#45;&#45;&#45;-->
+    <!--    DON'T TOUCH LAYOUT FILE-->
+    <!--    &#45;&#45;&#45;&#45;-->
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/app_start"

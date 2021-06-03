@@ -5,10 +5,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textAllCaps="true"
         android:layout_marginVertical="20dp"
         android:text="Let's meet more People..!!"
         android:textAlignment="center"

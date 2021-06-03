@@ -6,6 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".user.announcement.AnnouncementActivity">
 
+
+    <!--    &#45;&#45;&#45;&#45;-->
+    <!--    DON'T TOUCH LAYOUT FILE-->
+    <!--    &#45;&#45;&#45;&#45;-->
+
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/app_start"
         android:name="androidx.navigation.fragment.NavHostFragment"

@@ -6,12 +6,23 @@
     android:layout_marginTop="40dp"
     tools:context=".user.ViewUserProfileActivity">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginHorizontal="30dp"
         android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:padding="5dp"
+            android:text="Let's Connect..!!"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/color_ascent"
+            android:textSize="20sp" />
 
 
         <TextView
@@ -40,47 +51,94 @@
             android:textSize="20sp" />
 
         <!--        Phone Number-->
-        <com.google.android.material.textfield.TextInputLayout
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:backgroundTint="@color/white"
+                android:focusableInTouchMode="false"
+                android:inputType="none"
+                android:text="Phone No"
+                android:textAllCaps="true"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tv_inviter_phone_no"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/white"
                 android:clickable="false"
                 android:focusable="false"
+                android:hint="@string/default_string"
                 android:focusableInTouchMode="false"
-                android:hint="Phone No"
+                android:textSize="20sp"
                 android:inputType="none"
                 android:textAllCaps="true" />
 
-        </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
 
         <!--        College Name-->
-        <com.google.android.material.textfield.TextInputLayout
+        <LinearLayout
+            android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_marginVertical="10dp"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/tv_inviter_clg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:backgroundTint="@color/white"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:inputType="none"
+                android:text="College Name"
+                android:textAllCaps="true"
+                android:textSize="18sp" />
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/white"
                 android:clickable="false"
                 android:focusable="false"
+                android:hint="@string/default_string"
                 android:focusableInTouchMode="false"
-                android:hint="College Name"
+                android:textSize="20sp"
                 android:inputType="none"
                 android:textAllCaps="true" />
 
-        </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
 
         <!--        Enrolled Degree-->
-        <com.google.android.material.textfield.TextInputLayout
+        <LinearLayout
+            android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_marginVertical="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:backgroundTint="@color/white"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:inputType="none"
+                android:text="Enrolled Degree"
+                android:textAllCaps="true"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tv_inviter_degree"
@@ -89,17 +147,33 @@
                 android:backgroundTint="@color/white"
                 android:clickable="false"
                 android:focusable="false"
+                android:text="@string/default_string"
                 android:focusableInTouchMode="false"
-                android:hint="Enrolled Degree"
+                android:textSize="20sp"
                 android:inputType="none"
                 android:textAllCaps="true" />
 
-        </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
 
         <!--        Location-->
-        <com.google.android.material.textfield.TextInputLayout
+        <LinearLayout
+            android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_marginVertical="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:backgroundTint="@color/white"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:inputType="none"
+                android:text="Location"
+                android:textAllCaps="true"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tv_inviter_location"
@@ -108,17 +182,33 @@
                 android:backgroundTint="@color/white"
                 android:clickable="false"
                 android:focusable="false"
+                android:text="@string/default_string"
                 android:focusableInTouchMode="false"
-                android:hint="Location"
+                android:textSize="20sp"
                 android:inputType="none"
                 android:textAllCaps="true" />
 
-        </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
 
         <!--        Skills-->
-        <com.google.android.material.textfield.TextInputLayout
+        <LinearLayout
+            android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_marginVertical="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:backgroundTint="@color/white"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:inputType="none"
+                android:text="Skills"
+                android:textAllCaps="true"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tv_inviter_skills"
@@ -127,26 +217,28 @@
                 android:backgroundTint="@color/white"
                 android:clickable="false"
                 android:focusable="false"
+                android:text="@string/default_string"
                 android:focusableInTouchMode="false"
-                android:hint="Skills"
+                android:textSize="20sp"
                 android:inputType="none"
                 android:textAllCaps="true" />
 
-        </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
 
         <!--        LinkedIn-->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
+            <EditText
                 android:id="@+id/tv_inviter_linkedIn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:autoLink="web"
                 android:backgroundTint="@color/white"
-                android:clickable="true"
-                android:focusable="true"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
                 android:hint="LinkedIn Profile Link"
                 android:inputType="none" />
 
@@ -157,16 +249,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
+            <EditText
                 android:id="@+id/tv_inviter_codechef"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:autoLink="web"
                 android:backgroundTint="@color/white"
-                android:clickable="true"
-                android:focusable="true"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
                 android:hint="Code Chef Profile Link"
-                android:inputType="none" />
+                android:inputType="" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -175,14 +268,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
+            <EditText
                 android:id="@+id/tv_inviter_hackerrank"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:autoLink="web"
                 android:backgroundTint="@color/white"
-                android:clickable="true"
-                android:focusable="true"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
                 android:hint="Hacker Rank Profile Link"
                 android:inputType="none" />
 
@@ -190,6 +284,7 @@
 
         <Button
             android:id="@+id/btn_inviter_mail_to"
+            android:layout_marginVertical="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"

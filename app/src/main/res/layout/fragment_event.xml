@@ -11,6 +11,7 @@
         android:layout_marginVertical="20dp"
         android:text="Let's Check Out Events"
         android:textAlignment="center"
+        android:textAllCaps="true"
         android:textColor="@color/color_ascent"
         android:textSize="20sp" />
 

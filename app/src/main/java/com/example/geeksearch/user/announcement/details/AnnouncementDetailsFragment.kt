@@ -25,7 +25,7 @@ class AnnouncementDetailsFragment : Fragment() {
         val view = binding.root
         // Inflate the layout for this fragment
         val arguments = arguments?.let { AnnouncementDetailsFragmentArgs.fromBundle(it) }
-        val ann: AnnouncementModel? = arguments.Announcemnets
+        val ann: AnnouncementModel? = arguments?.Announcemnets
 
         if (ann != null) {
             binding.tvAnnDetailsHackName.text = ann.hackName

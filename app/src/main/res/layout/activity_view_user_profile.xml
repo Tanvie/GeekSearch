@@ -93,7 +93,6 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/tv_inviter_clg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="20dp"
@@ -107,6 +106,7 @@
                 android:textSize="18sp" />
 
             <TextView
+                android:id="@+id/tv_inviter_clg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/white"
@@ -230,15 +230,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <EditText
+            <TextView
                 android:id="@+id/tv_inviter_linkedIn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:autoLink="web"
                 android:backgroundTint="@color/white"
-                android:clickable="false"
-                android:focusable="false"
-                android:focusableInTouchMode="false"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:textSize="25sp"
                 android:hint="LinkedIn Profile Link"
                 android:inputType="none" />
 
@@ -249,15 +250,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <EditText
+            <TextView
                 android:id="@+id/tv_inviter_codechef"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:autoLink="web"
                 android:backgroundTint="@color/white"
-                android:clickable="false"
-                android:focusable="false"
-                android:focusableInTouchMode="false"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:textSize="25sp"
                 android:hint="Code Chef Profile Link"
                 android:inputType="" />
 
@@ -268,15 +270,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <EditText
+            <TextView
                 android:id="@+id/tv_inviter_hackerrank"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:autoLink="web"
                 android:backgroundTint="@color/white"
-                android:clickable="false"
-                android:focusable="false"
-                android:focusableInTouchMode="false"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:textSize="25sp"
                 android:hint="Hacker Rank Profile Link"
                 android:inputType="none" />
 

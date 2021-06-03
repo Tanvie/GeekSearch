@@ -31,10 +31,11 @@ class ViewUserProfileActivity : AppCompatActivity() {
                 binding.tvInviterEmail.text = user["userEmail"].toString()
                 binding.tvInviterPhoneNo.text = user["phoneNo"].toString()
                 binding.tvInviterLocation.text = user["userLocation"].toString()
-                binding.tvInviterCodechef.setText(user["codeChefLink"].toString())
-                binding.tvInviterCodechef.setText(user["linkedInLink"].toString())
-                binding.tvInviterCodechef.setText(user["hackerRankLink"].toString())
+                binding.tvInviterCodechef.text = user["codeChefLink"].toString()
+                binding.tvInviterLinkedIn.text = user["linkedInLink"].toString()
+                binding.tvInviterHackerrank.text = user["hackerRankLink"].toString()
                 binding.tvInviterSkills.text = user["userSkills"].toString()
+
                 Toast.makeText(this, "Profile data fetched", Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(this, "Error in Fetching user!", Toast.LENGTH_SHORT).show()

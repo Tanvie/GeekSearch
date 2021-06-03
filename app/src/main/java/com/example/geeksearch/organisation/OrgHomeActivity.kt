@@ -15,6 +15,7 @@ class OrgHomeActivity : AppCompatActivity() {
 
         ohBtAddEvent.setOnClickListener {
             startActivity(Intent(this, AddEventActivity::class.java))
+            finish()
         }
     }
 }

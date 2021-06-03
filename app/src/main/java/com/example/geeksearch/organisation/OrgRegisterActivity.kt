@@ -77,6 +77,7 @@ class OrgRegisterActivity : AppCompatActivity() {
                                     Toast.makeText(this, "organisation added", Toast.LENGTH_SHORT)
                                         .show()
                                     startActivity(Intent(this, OrgHomeActivity::class.java))
+                                    finish()
                                 }
                                 .addOnFailureListener {
                                     Toast.makeText(

@@ -17,8 +17,8 @@
             android:layout_marginVertical="10dp"
             android:padding="5dp"
             android:text="Let's Check Out Event..!!"
-            android:textAllCaps="true"
             android:textAlignment="center"
+            android:textAllCaps="true"
             android:textColor="@color/color_ascent"
             android:textSize="20sp" />
 
@@ -147,8 +147,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
-                android:textAlignment="center"
                 android:text="REGISTRATION DATES"
+                android:textAlignment="center"
                 android:textColor="@color/color_secondary"
                 android:textSize="16sp" />
 
@@ -204,8 +204,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:padding="5dp"
-                android:textAlignment="center"
                 android:text="HACKATHON DATES "
+                android:textAlignment="center"
                 android:textColor="@color/color_secondary"
                 android:textSize="16sp" />
 

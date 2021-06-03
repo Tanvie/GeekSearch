@@ -76,19 +76,19 @@
                 android:backgroundTint="@color/white"
                 android:clickable="false"
                 android:focusable="false"
-                android:hint="@string/default_string"
                 android:focusableInTouchMode="false"
-                android:textSize="20sp"
+                android:hint="@string/default_string"
                 android:inputType="none"
-                android:textAllCaps="true" />
+                android:textAllCaps="true"
+                android:textSize="20sp" />
 
         </LinearLayout>
 
 
         <!--        College Name-->
         <LinearLayout
-            android:layout_height="wrap_content"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginVertical="10dp"
             android:orientation="horizontal">
 
@@ -112,18 +112,18 @@
                 android:backgroundTint="@color/white"
                 android:clickable="false"
                 android:focusable="false"
-                android:hint="@string/default_string"
                 android:focusableInTouchMode="false"
-                android:textSize="20sp"
+                android:hint="@string/default_string"
                 android:inputType="none"
-                android:textAllCaps="true" />
+                android:textAllCaps="true"
+                android:textSize="20sp" />
 
         </LinearLayout>
 
         <!--        Enrolled Degree-->
         <LinearLayout
-            android:layout_height="wrap_content"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginVertical="10dp"
             android:orientation="horizontal">
 
@@ -147,18 +147,18 @@
                 android:backgroundTint="@color/white"
                 android:clickable="false"
                 android:focusable="false"
-                android:text="@string/default_string"
                 android:focusableInTouchMode="false"
-                android:textSize="20sp"
                 android:inputType="none"
-                android:textAllCaps="true" />
+                android:text="@string/default_string"
+                android:textAllCaps="true"
+                android:textSize="20sp" />
 
         </LinearLayout>
 
         <!--        Location-->
         <LinearLayout
-            android:layout_height="wrap_content"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginVertical="10dp"
             android:orientation="horizontal">
 
@@ -182,18 +182,18 @@
                 android:backgroundTint="@color/white"
                 android:clickable="false"
                 android:focusable="false"
-                android:text="@string/default_string"
                 android:focusableInTouchMode="false"
-                android:textSize="20sp"
                 android:inputType="none"
-                android:textAllCaps="true" />
+                android:text="@string/default_string"
+                android:textAllCaps="true"
+                android:textSize="20sp" />
 
         </LinearLayout>
 
         <!--        Skills-->
         <LinearLayout
-            android:layout_height="wrap_content"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginVertical="10dp"
             android:orientation="horizontal">
 
@@ -217,11 +217,11 @@
                 android:backgroundTint="@color/white"
                 android:clickable="false"
                 android:focusable="false"
-                android:text="@string/default_string"
                 android:focusableInTouchMode="false"
-                android:textSize="20sp"
                 android:inputType="none"
-                android:textAllCaps="true" />
+                android:text="@string/default_string"
+                android:textAllCaps="true"
+                android:textSize="20sp" />
 
         </LinearLayout>
 
@@ -239,9 +239,9 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:focusableInTouchMode="true"
-                android:textSize="25sp"
                 android:hint="LinkedIn Profile Link"
-                android:inputType="none" />
+                android:inputType="none"
+                android:textSize="25sp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -259,9 +259,9 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:focusableInTouchMode="true"
-                android:textSize="25sp"
                 android:hint="Code Chef Profile Link"
-                android:inputType="" />
+                android:inputType=""
+                android:textSize="25sp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -279,17 +279,17 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:focusableInTouchMode="true"
-                android:textSize="25sp"
                 android:hint="Hacker Rank Profile Link"
-                android:inputType="none" />
+                android:inputType="none"
+                android:textSize="25sp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:id="@+id/btn_inviter_mail_to"
-            android:layout_marginVertical="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/rounded_button"
             android:text="Send an Email" />

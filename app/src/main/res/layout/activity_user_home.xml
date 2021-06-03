@@ -23,6 +23,47 @@
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/ic_baseline_person_24" />
 
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_margin="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_button"
+                android:padding="10dp"
+                android:text="@string/tvOrgHome1"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:typeface="serif" />
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_margin="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_button"
+                android:padding="10dp"
+                android:text="@string/tvOrgHome2"
+                android:textAlignment="textEnd"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:typeface="serif"
+                tools:ignore="RtlCompat" />
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_margin="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_button"
+                android:padding="10dp"
+                android:text="@string/tvOrgHome3"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:typeface="serif" />
+
             <Button
                 android:id="@+id/btn_user_home_activity_event"
                 android:layout_width="match_parent"

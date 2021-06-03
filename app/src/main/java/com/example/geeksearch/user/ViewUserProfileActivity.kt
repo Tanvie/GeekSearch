@@ -1,4 +1,4 @@
-package com.example.geeksearch
+package com.example.geeksearch.user
 
 import android.content.ActivityNotFoundException
 import android.content.Intent
@@ -9,8 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.geeksearch.databinding.ActivityViewUserProfileBinding
 import com.google.firebase.firestore.FirebaseFirestore
 
-
-class ViewUserProfile : AppCompatActivity() {
+class ViewUserProfileActivity : AppCompatActivity() {
     private lateinit var binding: ActivityViewUserProfileBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,9 +43,8 @@ class ViewUserProfile : AppCompatActivity() {
             Toast.makeText(this, "User Failed to fetch!", Toast.LENGTH_SHORT).show()
         }
 
-
         binding.btnInviterMailTo.setOnClickListener {
-            var send: String =
+            val send: String =
                 "mailto:$inviterEmail?subject=About Announcement made on GeekSearch about: $hackName"
             val emailIntent = Intent(Intent.ACTION_SENDTO)
             emailIntent.data = Uri.parse(send)

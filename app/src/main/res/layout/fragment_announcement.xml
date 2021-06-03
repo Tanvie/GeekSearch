@@ -15,7 +15,6 @@
         android:textColor="@color/color_ascent"
         android:textSize="20sp" />
 
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_announcement"
         android:layout_width="match_parent"

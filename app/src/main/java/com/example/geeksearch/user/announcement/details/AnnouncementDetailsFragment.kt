@@ -6,8 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.geeksearch.ViewUserProfile
 import com.example.geeksearch.databinding.FragmentAnnouncementDetailsBinding
+import com.example.geeksearch.user.ViewUserProfileActivity
 import com.example.geeksearch.user.announcement.announcement.AnnouncementModel
 import de.cketti.mailto.EmailIntentBuilder
 
@@ -25,7 +25,7 @@ class AnnouncementDetailsFragment : Fragment() {
         val view = binding.root
         // Inflate the layout for this fragment
         val arguments = arguments?.let { AnnouncementDetailsFragmentArgs.fromBundle(it) }
-        val ann: AnnouncementModel? = arguments?.Announcemnets
+        val ann: AnnouncementModel? = arguments.Announcemnets
 
         if (ann != null) {
             binding.tvAnnDetailsHackName.text = ann.hackName
@@ -51,7 +51,7 @@ class AnnouncementDetailsFragment : Fragment() {
         }
 
         binding.btnViewUserProfile.setOnClickListener {
-            val intent = Intent(activity, ViewUserProfile::class.java)
+            val intent = Intent(activity, ViewUserProfileActivity::class.java)
             if (ann != null) {
                 intent.putExtra("inviterEmail", ann.userEmail)
                 intent.putExtra("hack_name", ann.hackName)

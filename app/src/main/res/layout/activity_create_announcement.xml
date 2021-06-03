@@ -26,33 +26,39 @@
         <!--        Name-->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Your Full Name">
 
-            <EditText
+
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_user_ann_user_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/edit_text_border"
-                android:hint="Your Full Name"
-                android:padding="5dp" />
+                android:backgroundTint="@color/white"
+                android:inputType="textPersonName"
+                android:textSize="15sp">
 
+            </com.google.android.material.textfield.TextInputEditText>
         </com.google.android.material.textfield.TextInputLayout>
 
         <!--        Hackathon Name-->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Hackathon Title">
 
-            <EditText
+
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_user_ann_hack_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/edit_text_border"
-                android:hint="Hackathon Title"
-                android:padding="5dp" />
+                android:backgroundTint="@color/white"
+                android:inputType="textPersonName"
+                android:textSize="15sp">
 
+            </com.google.android.material.textfield.TextInputEditText>
         </com.google.android.material.textfield.TextInputLayout>
 
         <!--        Domain-->
@@ -109,65 +115,67 @@
         </RadioGroup>
 
         <!--Requirements-->
-        <com.google.android.material.textfield.TextInputLayout
+
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:padding="5dp"
+            android:text="Requirements"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/color_ascent" />
 
-            <EditText
-                android:id="@+id/et_user_ann_requirements"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/edit_text_border"
-                android:gravity="top|left"
-                android:hint="Requirements"
-                android:lines="5"
-                android:padding="5dp" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <!--        Message for Announcement-->
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/et_user_ann_message"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/edit_text_border"
-                android:gravity="top|left"
-                android:hint="Message for Announcement"
-                android:lines="5"
-                android:padding="5dp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <LinearLayout
+        <EditText
+            android:id="@+id/et_user_ann_requirements"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:orientation="horizontal">
+            android:background="@drawable/edit_text_border"
+            android:gravity="top|left"
+            android:hint="Requirements"
+            android:lines="5"
+            android:padding="5dp" />
 
-            <!--            Event Dates-->
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:padding="5dp"
-                android:text="EVENT DATES"
-                android:textAlignment="center"
-                android:textColor="@color/color_ascent" />
+        <!--        Message for Announcement-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:padding="5dp"
+            android:text="Message for Announcement"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/color_ascent" />
 
-        </LinearLayout>
+        <EditText
+            android:id="@+id/et_user_ann_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edit_text_border"
+            android:gravity="top|left"
+            android:hint="Message for Announcement"
+            android:lines="5"
+            android:padding="5dp" />
+
+        <!--            Event Dates-->
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:text="EVENT DATES"
+            android:textAlignment="center"
+            android:textColor="@color/color_ascent" />
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:orientation="horizontal">
-
 
             <ImageButton
                 android:id="@+id/img_btn_user_ann_start_date"

@@ -27,7 +27,6 @@
             android:textColor="@color/color_ascent"
             android:textSize="24sp" />
 
-
         <TextView
             android:id="@+id/tv_user_email"
             android:layout_width="match_parent"
@@ -198,7 +197,6 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/rounded_button"
             android:text="Edit Profile" />
-
 
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GeekSearch">
-        <activity android:name=".ViewUserProfile"></activity>
+        <activity android:name=".user.ViewUserProfileActivity"></activity>
         <activity android:name=".user.announcement.AnnouncementActivity" />
         <activity android:name=".user.announcement.create.CreateAnnouncementActivity" />
         <activity android:name=".user.event.EventActivity" />

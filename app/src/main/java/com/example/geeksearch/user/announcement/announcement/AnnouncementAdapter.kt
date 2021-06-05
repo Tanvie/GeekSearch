@@ -42,8 +42,8 @@ class AnnouncementAdapter(
         }
 
         fun bindEventData(announcementModel: AnnouncementModel) {
-            eventUserName.text = announcementModel.hackName
-            hackName.text = announcementModel.hackDomain
+            eventUserName.text = announcementModel.userName
+            hackName.text = announcementModel.hackName
         }
     }
 

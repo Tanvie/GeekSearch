@@ -15,13 +15,16 @@
             android:layout_height="match_parent"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
+            android:layout_margin="5dp"
             android:orientation="vertical">
 
             <ImageButton
                 android:id="@+id/img_btn_user_profile"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/ic_baseline_person_24" />
+                android:layout_gravity="right"
+                android:layout_margin="10dp"
+                app:srcCompat="@drawable/ic_baseline_person2_24" />
 
             <TextView
                 android:layout_width="250dp"
@@ -44,8 +47,8 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/rounded_button"
                 android:padding="10dp"
-                android:text="@string/tvOrgHome2"
-                android:textAlignment="textEnd"
+                android:text="@string/tvUser2"
+                android:textAlignment="textStart"
                 android:textColor="@color/white"
                 android:textSize="15sp"
                 android:typeface="serif"
@@ -59,36 +62,37 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/rounded_button"
                 android:padding="10dp"
-                android:text="@string/tvOrgHome3"
+                android:text="@string/tvUser3"
                 android:textColor="@color/white"
                 android:textSize="15sp"
                 android:typeface="serif" />
 
-            <Button
-                android:id="@+id/btn_user_home_activity_event"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="50dp"
-                android:layout_marginEnd="40dp"
-                android:background="@drawable/rounded_button"
-                android:text="Events" />
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/btn_user_home_activity_announcement"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="50dp"
-                android:layout_marginEnd="40dp"
-                android:background="@drawable/rounded_button"
-                android:text="Announcement" />
+                <Button
+                    android:id="@+id/btn_user_home_activity_event"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:drawableLeft="@drawable/ic_baseline_notifications_active_24"
+                    android:text="Events" />
 
+                <Button
+                    android:id="@+id/btn_user_home_activity_announcement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:drawableLeft="@drawable/ic_baseline_group_24"
+                    android:text="TEAMS" />
+            </LinearLayout>
 
         </LinearLayout>
 
-
     </RelativeLayout>
-
 
 </androidx.core.widget.NestedScrollView>

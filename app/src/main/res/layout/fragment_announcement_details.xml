@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,32 +13,87 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:layout_marginBottom="20dp"
-        android:text="Find More about the team"
+        android:layout_marginBottom="10dp"
+        android:text="Learn More about the team"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="@color/color_ascent"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Team Leader : "
+            android:textColor="@color/color_secondary"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_ann_details_hack_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="User Name"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Contact :"
+            android:textColor="@color/color_secondary"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_ann_details_hack_user_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="User Email"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
 
     <!--    Hack Name-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
         android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="20sp"
-            android:text="Hack Name"
-            android:textSize="18sp" />
+            android:layout_margin="5dp"
+            android:text="Hackathon :"
+            android:textColor="@color/color_secondary"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/tv_ann_details_hack_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
             android:text="Hack Name"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -45,37 +101,41 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="20sp"
+        android:layout_margin="5dp"
         android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="20sp"
-            android:text="Hack domain"
-            android:textSize="18sp" />
+            android:layout_margin="5dp"
+            android:text="Domain :"
+            android:textColor="@color/color_secondary"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/tv_ann_details_hack_domain"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
             android:text="Hack domain"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hack Time"
+        android:layout_margin="10dp"
+        android:text="HACKATHON DATES"
         android:textAlignment="center"
-        android:textColor="@color/color_ascent"
+        android:textColor="@color/color_secondary"
         android:textSize="20sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_margin="5dp"
         android:orientation="horizontal"
         android:weightSum="3">
 
@@ -104,98 +164,62 @@
             android:textSize="20sp" />
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20sp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="18sp"
-            android:text="User Name"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/tv_ann_details_hack_user_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="User Name"
-            android:textSize="20sp" />
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20sp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="18sp"
-            android:text="User Email"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/tv_ann_details_hack_user_email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="User Email"
-            android:textSize="20sp" />
-
-    </LinearLayout>
-
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20sp"
-        android:text="Hack message"
-        android:textSize="18sp" />
-
-    <TextView
-        android:id="@+id/tv_ann_details_hack_message"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10sp"
-        android:text="Hack message"
+        android:layout_margin="5dp"
+        android:text="Member Requirements"
+        android:textColor="@color/color_secondary"
         android:textSize="20sp" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20sp"
-        android:text="Hack requirements"
-        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/tv_ann_details_hack_requirements"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10sp"
+        android:layout_margin="5dp"
         android:text="Hack requirements"
         android:textSize="20sp" />
 
-    <Button
-        android:id="@+id/btn_view_user_profile"
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="40sp"
-        android:layout_marginTop="30sp"
-        android:layout_marginBottom="20sp"
-        android:background="@drawable/rounded_button"
-        android:text="View Profile" />
+        android:layout_margin="5dp"
+        android:text="Additional Message"
+        android:textColor="@color/color_secondary"
+        android:textSize="20sp" />
 
-    <Button
-        android:id="@+id/btn_mail_to"
+    <TextView
+        android:id="@+id/tv_ann_details_hack_message"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/rounded_button"
-        android:text="Mail To" />
+        android:layout_margin="5dp"
+        android:text="Hack message"
+        android:textSize="20sp" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_view_user_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_button"
+            android:drawableLeft="@drawable/ic_baseline_person3_24"
+            android:text="View\nProfile" />
+
+        <Button
+            android:id="@+id/btn_mail_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_button"
+            android:drawableLeft="@drawable/ic_baseline_email_24"
+            android:text="Mail\nLeader" />
+    </LinearLayout>
 
 </LinearLayout>

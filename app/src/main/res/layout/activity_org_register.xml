@@ -69,6 +69,24 @@
             </com.google.android.material.textfield.TextInputEditText>
 
         </com.google.android.material.textfield.TextInputLayout>
+        <!--        Location-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Location">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_organisation_registration_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:inputType="text"
+                android:textSize="15dp">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <!--        Password-->
         <com.google.android.material.textfield.TextInputLayout
@@ -89,24 +107,6 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!--        Location-->
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:hint="Location">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_organisation_registration_location"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/white"
-                android:inputType="textPassword"
-                android:textSize="15dp">
-
-            </com.google.android.material.textfield.TextInputEditText>
-
-        </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:id="@+id/btn_organisation_registration_register"

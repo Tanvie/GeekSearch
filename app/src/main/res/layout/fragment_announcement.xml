@@ -9,11 +9,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginVertical="20dp"
-        android:text="Let's meet more People..!!"
+        android:text="Let's meet other Geeks !!"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="@color/color_ascent"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_announcement"

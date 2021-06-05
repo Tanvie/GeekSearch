@@ -336,8 +336,9 @@
 
         <Button
             android:id="@+id/btSubmit"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginVertical="15dp"
             android:background="@drawable/rounded_button"
             android:padding="5dp"

@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     tools:context=".organisation.OrgRegisterActivity">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -112,9 +111,7 @@
             android:id="@+id/btn_organisation_registration_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
             android:layout_marginTop="20dp"
-            android:layout_marginEnd="50dp"
             android:background="@drawable/rounded_button"
             android:text="Register" />
 
@@ -143,6 +140,5 @@
                 android:textSize="18sp" />
 
         </LinearLayout>
-
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

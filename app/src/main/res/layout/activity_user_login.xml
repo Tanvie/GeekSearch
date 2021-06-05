@@ -74,9 +74,7 @@
             android:id="@+id/ulBtLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
             android:layout_marginTop="20dp"
-            android:layout_marginEnd="50dp"
             android:background="@drawable/rounded_button"
             android:text="Login" />
 
@@ -103,8 +101,6 @@
                 android:text="Register Here"
                 android:textColor="@color/color_ascent"
                 android:textSize="18sp" />
-
         </LinearLayout>
-
     </LinearLayout>
 </RelativeLayout>

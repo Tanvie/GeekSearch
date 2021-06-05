@@ -6,6 +6,7 @@
     android:layout_marginHorizontal="20dp"
     android:layout_marginVertical="20dp"
     http:cardCornerRadius="20dp"
+    android:paddingVertical="20dp"
     http:cardElevation="30dp"
     http:cardPreventCornerOverlap="true">
 

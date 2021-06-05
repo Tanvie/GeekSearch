@@ -15,10 +15,9 @@
 
         <TextView
             android:id="@+id/textView0"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:inputType="textMultiLine"
             android:padding="10dp"
             android:text="ANNOUNCEMENT FOR TEAM SEARCH"
             android:textAlignment="center"
@@ -230,17 +229,15 @@
                 android:padding="5dp" />
         </LinearLayout>
 
-
         <Button
             android:id="@+id/btn_user_ann_create_ann"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="15dp"
+            android:layout_marginVertical="20dp"
             android:background="@drawable/rounded_button"
             android:padding="5dp"
             android:text="SUBMIT" />
     </LinearLayout>
-
 
 </androidx.core.widget.NestedScrollView>

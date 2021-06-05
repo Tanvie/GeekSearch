@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     tools:context=".organisation.OrgLoginActivity">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,12 +23,11 @@
             android:scaleType="fitCenter"
             android:src="@drawable/logo" />
 
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Organisation Login"
-            android:textColor="#FF8A00"
+            android:textColor="@color/color_ascent"
             android:textSize="30sp" />
 
         <!--        Email Address-->
@@ -45,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/white"
                 android:inputType="textEmailAddress"
-                android:textSize="15dp">
+                android:textSize="15sp">
 
             </com.google.android.material.textfield.TextInputEditText>
 
@@ -64,20 +62,17 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/white"
                 android:inputType="textPassword"
-                android:textSize="15dp">
+                android:textSize="15sp">
 
             </com.google.android.material.textfield.TextInputEditText>
 
         </com.google.android.material.textfield.TextInputLayout>
 
-
         <Button
             android:id="@+id/btn_organisation_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="50dp"
+            android:layout_marginTop="40dp"
             android:background="@drawable/rounded_button"
             android:text="Login" />
 
@@ -94,7 +89,6 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Don't Have A Account?" />
-
 
             <TextView
                 android:id="@+id/tv_organisation_login_register"

@@ -13,7 +13,8 @@
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="@color/color_ascent"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_announcement"

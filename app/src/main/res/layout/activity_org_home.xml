@@ -46,7 +46,7 @@
             android:background="@drawable/rounded_button"
             android:padding="10dp"
             android:text="@string/tvOrgHome2"
-            android:textAlignment="textEnd"
+            android:textAlignment="textStart"
             android:textColor="@color/white"
             android:textSize="15sp"
             android:typeface="serif"
@@ -74,6 +74,7 @@
             android:layout_margin="10dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/rounded_button"
+            android:drawableLeft="@drawable/ic_baseline_add_circle_24"
             android:text="ADD EVENT"
             android:textSize="20sp" />
     </LinearLayout>

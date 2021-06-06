@@ -53,7 +53,7 @@ class OrgLoginActivity : AppCompatActivity() {
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
                             // Sign in success, update UI with the signed-in user's information
-                            val user = mauth.currentUser
+//                            val user = mauth.currentUser
                             Toast.makeText(
                                 baseContext, "Login Successful",
                                 Toast.LENGTH_SHORT

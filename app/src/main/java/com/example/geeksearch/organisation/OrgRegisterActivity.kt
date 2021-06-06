@@ -18,7 +18,7 @@ class OrgRegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_org_register)
 
-        var mAuth: FirebaseAuth = FirebaseAuth.getInstance()
+        val mAuth: FirebaseAuth = FirebaseAuth.getInstance()
 
         val orBtLogin = findViewById<TextView>(R.id.tv_organisation_registration_login)
         val orEdName = findViewById<EditText>(R.id.et_organisation_registration_name)
@@ -30,14 +30,15 @@ class OrgRegisterActivity : AppCompatActivity() {
 
         orBtLogin.setOnClickListener {
             startActivity(Intent(this, OrgLoginActivity::class.java))
+            finish()
         }
 
         orBtRegister.setOnClickListener {
 
-            var orgName = orEdName.text.toString()
-            var orgEmail = orEdMail.text.toString()
-            var orgLocation = orEdLocation.text.toString()
-            var orgPassword = orEdPassword.text.toString()
+            val orgName = orEdName.text.toString()
+            val orgEmail = orEdMail.text.toString()
+            val orgLocation = orEdLocation.text.toString()
+            val orgPassword = orEdPassword.text.toString()
 
             if (TextUtils.isEmpty(orgEmail)) {
                 Toast.makeText(

@@ -39,14 +39,13 @@ class CreateAnnouncementActivity : AppCompatActivity() {
         val etAnnHackEndDate = findViewById<EditText>(R.id.et_user_ann_hack_end_date)
         val btnAnnHackSubmit = findViewById<Button>(R.id.btn_user_ann_create_ann)
         val etAnnHackUsername = findViewById<EditText>(R.id.et_user_ann_user_name)
-        var domain: String
 
-        if (rbAnnHackDomainSw.isChecked) {
-            domain = "Software"
+        val domain: String = if (rbAnnHackDomainSw.isChecked) {
+            "Software"
         } else if (rbAnnHackDomainHw.isChecked) {
-            domain = "Hardware"
+            "Hardware"
         } else {
-            domain = "Hardware and Software"
+            "Hardware and Software"
         }
         btnUserAnnStartDate.setOnClickListener {
             val calendar: Calendar = Calendar.getInstance()

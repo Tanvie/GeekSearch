@@ -33,6 +33,7 @@ class UserRegisterActivity : AppCompatActivity() {
 
         urBtLogin.setOnClickListener {
             startActivity(Intent(this, UserLoginActivity::class.java))
+            finish()
         }
 
         urBtRegister.setOnClickListener {
@@ -104,6 +105,7 @@ class UserRegisterActivity : AppCompatActivity() {
                                 .addOnSuccessListener {
                                     Toast.makeText(this, "user added", Toast.LENGTH_SHORT).show()
                                     startActivity(Intent(this, UserHomeActivity::class.java))
+                                    finish()
                                 }
                                 .addOnFailureListener {
                                     Toast.makeText(this, "user failed to add", Toast.LENGTH_SHORT)

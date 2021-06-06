@@ -32,6 +32,7 @@ class OrgLoginActivity : AppCompatActivity() {
 
         olBtRegister.setOnClickListener {
             startActivity(Intent(this, OrgRegisterActivity::class.java))
+
         }
 
         olBtLogin.setOnClickListener {

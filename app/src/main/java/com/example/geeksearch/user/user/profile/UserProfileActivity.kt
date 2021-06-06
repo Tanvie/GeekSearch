@@ -140,6 +140,7 @@ class UserProfileActivity : AppCompatActivity() {
                         .addOnSuccessListener {
                             Toast.makeText(this, "user data updated", Toast.LENGTH_SHORT).show()
                             startActivity(Intent(this, UserHomeActivity::class.java))
+                            finish()
                         }
                         .addOnFailureListener {
                             Toast.makeText(this, "user failed to update", Toast.LENGTH_SHORT)

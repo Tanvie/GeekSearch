@@ -29,6 +29,7 @@ class UserLoginActivity : AppCompatActivity() {
 
         tv_user_login_register.setOnClickListener {
             startActivity(Intent(this, UserRegisterActivity::class.java))
+            finish()
         }
 
         ulBtLogin.setOnClickListener {
@@ -60,6 +61,7 @@ class UserLoginActivity : AppCompatActivity() {
                                 Toast.LENGTH_LONG
                             ).show()
                             startActivity(Intent(this, UserHomeActivity::class.java))
+                            finish()
                         } else {
                             // If sign in fails, display a message to the user.
                             Toast.makeText(

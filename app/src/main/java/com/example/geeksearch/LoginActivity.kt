@@ -20,9 +20,11 @@ class LoginActivity : AppCompatActivity() {
 
         binding.laBtLoginUser.setOnClickListener {
             startActivity(Intent(this, UserLoginActivity::class.java))
+            finish()
         }
         binding.laBtLoginOrg.setOnClickListener {
             startActivity(Intent(this, OrgLoginActivity::class.java))
+            finish()
         }
     }
 }

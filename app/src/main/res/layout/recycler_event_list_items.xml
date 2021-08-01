@@ -3,10 +3,9 @@
     xmlns:http="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginHorizontal="10dp"
+    android:layout_marginHorizontal="20dp"
     android:layout_marginVertical="20dp"
-    http:cardBackgroundColor="#FFE6EE"
-    http:cardCornerRadius="40dp"
+    http:cardCornerRadius="20dp"
     http:cardElevation="30dp"
     http:cardPreventCornerOverlap="true">
 
@@ -14,86 +13,72 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20sp"
-        android:background="#FFE6EE"
         android:orientation="vertical">
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:id="@+id/linear1"
-                android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/tv_event_list_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Name Of event"
+            android:textAlignment="center"
+            android:textColor="@color/color_ascent"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/linear2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvTextView2"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal">
+                android:padding="10dp"
+                android:text="@string/domain"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/tv_event_list_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:text="eventFromdb "
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/linear2"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/tv_event_domain"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/linear1"
-                android:orientation="horizontal">
+                android:padding="10dp"
+                android:text="@string/default_string"
+                android:textSize="15sp"
+                android:textStyle="italic" />
 
-                <TextView
-                    android:id="@+id/tvTextView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:text="@string/domain"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
+        </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/linear3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/tv_event_domain"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:text="@string/domainfromdb"
-                    android:textSize="15sp"
-                    android:textStyle="italic" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/linear3"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/tvTextView3"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/linear2"
-                android:orientation="horizontal">
+                android:paddingVertical="10dp"
+                android:text="@string/register_now"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/tvTextView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:text="@string/register_now"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tv_event_link"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:padding="10dp"
-                    android:text="@string/reglinkfromdb"
-                    android:textSize="15sp"
-                    android:textStyle="italic" />
-            </LinearLayout>
-
-        </RelativeLayout>
+            <TextView
+                android:id="@+id/tv_event_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="10dp"
+                android:text="@string/default_string"
+                android:textSize="15sp"
+                android:textStyle="italic" />
+        </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

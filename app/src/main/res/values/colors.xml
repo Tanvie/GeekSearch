@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="color_primary">#E08A7B</color>
-    <color name="color_secondary">#022E43</color>
-    <color name="color_ascent">#19799E</color>
-    <color name="color_4">#055673</color>
-    <color name="color_5">#0A202E</color>
+    <color name="color_secondary">#FF7417</color>
+    <color name="color_ascent">#FF8A00</color>
+    <color name="color_grayDark">#999999</color>
+    <color name="color_4">#EF7215</color>
+    <color name="color_5">#F9812A</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 </resources>

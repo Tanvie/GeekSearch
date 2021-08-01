@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.geeksearch.R
@@ -17,25 +18,21 @@ class OrgLoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_org_login)
 
-//        val laBtSkip = findViewById<Button>(R.id.laBtSkip)
-        val olBtRegister = findViewById<Button>(R.id.olBtRegister)
-        val olBtLogin = findViewById<Button>(R.id.olBtLogin)
-        val et_login_mail = findViewById<EditText>(R.id.olEdMail)
-        val et_login_password = findViewById<EditText>(R.id.olEdPassword)
+        val olBtRegister = findViewById<TextView>(R.id.tv_organisation_login_register)
+        val olBtLogin = findViewById<Button>(R.id.btn_organisation_login)
+        val etLoginMail = findViewById<EditText>(R.id.et_organisation_login_email)
+        val etLoginPassword = findViewById<EditText>(R.id.et_organisation_login_password)
 
         val mauth: FirebaseAuth = Firebase.auth
 
-//        laBtSkip.setOnClickListener {
-//            startActivity(Intent(this, OrgHomeActivity::class.java))
-//        }
-
         olBtRegister.setOnClickListener {
             startActivity(Intent(this, OrgRegisterActivity::class.java))
+            finish()
         }
 
         olBtLogin.setOnClickListener {
-            val orgMail = et_login_mail.text.toString()
-            val orgPassword = et_login_password.text.toString()
+            val orgMail = etLoginMail.text.toString()
+            val orgPassword = etLoginPassword.text.toString()
 
             if (TextUtils.isEmpty(orgMail)) {
                 Toast.makeText(
@@ -56,12 +53,13 @@ class OrgLoginActivity : AppCompatActivity() {
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
                             // Sign in success, update UI with the signed-in user's information
-                            val user = mauth.currentUser
+//                            val user = mauth.currentUser
                             Toast.makeText(
                                 baseContext, "Login Successful",
                                 Toast.LENGTH_SHORT
                             ).show()
                             startActivity(Intent(this, OrgHomeActivity::class.java))
+                            finish()
                         } else {
                             // If sign in fails, display a message to the user.
                             Toast.makeText(

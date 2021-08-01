@@ -206,6 +206,7 @@ class AddEventActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener
             .addOnSuccessListener {
                 Toast.makeText(this, "Event added", Toast.LENGTH_SHORT).show()
                 startActivity(Intent(this, OrgHomeActivity::class.java))
+                finish()
             }
             .addOnFailureListener {
                 Toast.makeText(this, "record failed to add", Toast.LENGTH_SHORT).show()

@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
     tools:context=".organisation.OrgRegisterActivity">
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,74 +20,125 @@
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp" />
+            android:layout_marginTop="30dp"
+            android:src="@drawable/logo" />
 
-        <EditText
-            android:id="@+id/orEtName"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:hint="Organisation Name"
-            android:inputType="textPersonName" />
+            android:text="Organisation Register"
+            android:textAlignment="center"
+            android:textColor="#FF8A00"
+            android:textSize="30sp" />
 
-        <EditText
-            android:id="@+id/orEdMail"
+        <!--        Name-->
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:hint="Mail Address"
-            android:inputType="textEmailAddress" />
+            android:layout_marginTop="10dp"
+            android:hint="Organisation Name">
 
-        <EditText
-            android:id="@+id/orEdPassword"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_organisation_registration_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:inputType="textPersonName"
+                android:textSize="15dp">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--        Email Address-->
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:hint="Password"
-            android:inputType="textPassword" />
+            android:layout_marginTop="10dp"
+            android:hint="Organisation Email">
 
-        <EditText
-            android:id="@+id/orEdLocation"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_organisation_registration_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:inputType="textEmailAddress"
+                android:textSize="15dp">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--        Location-->
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:hint="Location"
-            android:inputType="text" />
+            android:layout_marginTop="10dp"
+            android:hint="Location">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_organisation_registration_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:inputType="text"
+                android:textSize="15dp">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--        Password-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Password">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_organisation_registration_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:inputType="textPassword"
+                android:textSize="15dp">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
 
 
         <Button
-            android:id="@+id/orBtRegister"
+            android:id="@+id/btn_organisation_registration_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
             android:layout_marginTop="20dp"
-            android:layout_marginEnd="50dp"
-            android:background="#FF9190"
+            android:background="@drawable/rounded_button"
             android:text="Register" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginStart="55dp"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
 
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Already A User?" />
+                android:layout_weight="1"
+                android:text="Don't Have A Account?" />
 
-
-            <Button
-                android:id="@+id/orBtLogin"
+            <TextView
+                android:id="@+id/tv_organisation_registration_login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="13dp"
+                android:layout_weight="1"
                 android:text="Login Here"
-                android:textSize="12sp" />
+                android:textColor="@color/color_ascent"
+                android:textSize="18sp" />
 
         </LinearLayout>
-
     </LinearLayout>
-</RelativeLayout>
+</androidx.core.widget.NestedScrollView>

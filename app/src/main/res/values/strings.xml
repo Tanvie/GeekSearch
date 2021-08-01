@@ -8,6 +8,9 @@
     <string name="reglinkfromdb">reglinkFromDB</string>
     <string name="register_now">REGISTER NOW!</string>
     <string name="domainfromdb">domainfromDB</string>
-    <string name="domain">DOMAIN :</string>
+    <string name="domain">DOMAIN</string>
     <string name="linkfromdb">linkfromdb</string>
+    <string name="tvUser2">The purpose of a hackathon is a for a group of programmers to work together on a collaborative project.<br />Participating in Hackathons will not only improve your network with people in your industry but also add value to your resume or CV. It signals to people that you have programming skills, experience working in intense environments, and know how to win. People know that participating in a hackathon instantly increases your knowledge and skill level.</string>
+    <string name="tvUser3">Planning on participating ?<br />To learn more about upcoming hackathons click EVENTS.<br />To find team for hackathon click TEAMS</string>
+    <string name="default_string">--</string>
 </resources>

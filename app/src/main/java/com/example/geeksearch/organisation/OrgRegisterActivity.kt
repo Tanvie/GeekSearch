@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.geeksearch.R
@@ -17,26 +18,27 @@ class OrgRegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_org_register)
 
-        var mAuth: FirebaseAuth = FirebaseAuth.getInstance()
+        val mAuth: FirebaseAuth = FirebaseAuth.getInstance()
 
-        val orBtLogin = findViewById<Button>(R.id.orBtLogin)
-        val orEdName = findViewById<EditText>(R.id.orEtName)
-        val orEdMail = findViewById<EditText>(R.id.orEdMail)
-        val orEdPassword = findViewById<EditText>(R.id.orEdPassword)
-        val orEdLocation = findViewById<EditText>(R.id.orEdLocation)
-        val orBtRegister = findViewById<Button>(R.id.orBtRegister)
+        val orBtLogin = findViewById<TextView>(R.id.tv_organisation_registration_login)
+        val orEdName = findViewById<EditText>(R.id.et_organisation_registration_name)
+        val orEdMail = findViewById<EditText>(R.id.et_organisation_registration_email)
+        val orEdPassword = findViewById<EditText>(R.id.et_organisation_registration_password)
+        val orEdLocation = findViewById<EditText>(R.id.et_organisation_registration_location)
+        val orBtRegister = findViewById<Button>(R.id.btn_organisation_registration_register)
 
 
         orBtLogin.setOnClickListener {
             startActivity(Intent(this, OrgLoginActivity::class.java))
+            finish()
         }
 
         orBtRegister.setOnClickListener {
 
-            var orgName = orEdName.text.toString()
-            var orgEmail = orEdMail.text.toString()
-            var orgLocation = orEdLocation.text.toString()
-            var orgPassword = orEdPassword.text.toString()
+            val orgName = orEdName.text.toString()
+            val orgEmail = orEdMail.text.toString()
+            val orgLocation = orEdLocation.text.toString()
+            val orgPassword = orEdPassword.text.toString()
 
             if (TextUtils.isEmpty(orgEmail)) {
                 Toast.makeText(
@@ -76,6 +78,7 @@ class OrgRegisterActivity : AppCompatActivity() {
                                     Toast.makeText(this, "organisation added", Toast.LENGTH_SHORT)
                                         .show()
                                     startActivity(Intent(this, OrgHomeActivity::class.java))
+                                    finish()
                                 }
                                 .addOnFailureListener {
                                     Toast.makeText(

@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".user.UserHomeActivity">
+    android:layout_marginHorizontal="20dp"
+    android:layout_marginVertical="10dp"
+    android:paddingVertical="20dp"
+    tools:context=".user.user.UserHomeActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -15,56 +17,85 @@
             android:layout_height="match_parent"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
+            android:layout_margin="5dp"
             android:orientation="vertical">
 
-            <ImageButton
-                android:id="@+id/img_btn_user_profile"
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/ic_baseline_person_24" />
+                android:layout_gravity="left"
+                android:layout_margin="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_button"
+                android:padding="10dp"
+                android:text="@string/tvOrgHome1"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:typeface="serif" />
 
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_margin="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_button"
+                android:padding="10dp"
+                android:text="@string/tvUser2"
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:typeface="serif"
+                tools:ignore="RtlCompat" />
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_margin="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_button"
+                android:padding="10dp"
+                android:text="@string/tvUser3"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:typeface="serif" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_user_home_activity_event"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/rounded_button"
+                    android:drawableLeft="@drawable/ic_baseline_notifications_active_24"
+                    android:text="Events" />
+
+                <Button
+                    android:id="@+id/btn_user_home_activity_announcement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/rounded_button"
+                    android:drawableLeft="@drawable/ic_baseline_group_24"
+                    android:text="TEAMS" />
+            </LinearLayout>
 
             <Button
-                android:id="@+id/haBtChat"
+                android:id="@+id/iv_btn_user_profile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="40dp"
-                android:text="skip to chat activity" />
-
-            <Button
-                android:id="@+id/haBtJoinTeam"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="40dp"
-                android:text="Join team" />
-
-            <Button
-                android:id="@+id/haBtCreateTeam"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="50dp"
-                android:layout_marginEnd="40dp"
-                android:text="Create team" />
-
-            <Button
-                android:id="@+id/btn_user_home_activity_event"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="50dp"
-                android:layout_marginEnd="40dp"
-                android:text="Events" />
-
+                android:layout_marginHorizontal="50dp"
+                android:background="@drawable/rounded_button"
+                android:drawableLeft="@drawable/ic_baseline_person2_24"
+                android:text="My Profile" />
 
         </LinearLayout>
-
-
     </RelativeLayout>
-
-
 </androidx.core.widget.NestedScrollView>

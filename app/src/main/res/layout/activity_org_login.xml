@@ -3,76 +3,101 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
     tools:context=".organisation.OrgLoginActivity">
-
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp">
+        android:paddingBottom="30dp">
 
         <ImageView
-            android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp" />
+            android:layout_marginBottom="20dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Organisation Login"
+            android:textColor="@color/color_ascent"
+            android:textSize="30sp" />
 
-        <EditText
-            android:id="@+id/olEdMail"
+        <!--        Email Address-->
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:hint="Mail Address"
-            android:inputType="textEmailAddress" />
+            android:layout_marginTop="10dp"
+            android:hint="Email">
 
-        <EditText
-            android:id="@+id/olEdPassword"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_organisation_login_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:inputType="textEmailAddress"
+                android:textSize="15sp">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--        Password-->
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:hint="Password"
-            android:inputType="textPassword" />
+            android:layout_marginTop="10dp"
+            android:hint="Password">
 
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_organisation_login_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:inputType="textPassword"
+                android:textSize="15sp">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/olBtLogin"
+            android:id="@+id/btn_organisation_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="50dp"
-            android:background="#FF9190"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/rounded_button"
             android:text="Login" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginStart="55dp"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
 
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Don't Have\nA Account?" />
+                android:layout_weight="1"
+                android:text="Don't Have A Account?" />
 
-
-            <Button
-                android:id="@+id/olBtRegister"
+            <TextView
+                android:id="@+id/tv_organisation_login_register"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:text="Register\nHere"
-                android:textColor="#FFFFFF"
+                android:layout_marginStart="13dp"
+                android:layout_weight="1"
+                android:text="Register Here"
+                android:textColor="@color/color_ascent"
                 android:textSize="18sp" />
 
         </LinearLayout>

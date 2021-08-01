@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".user.announcement.create.CreateAnnouncementActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="20dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp">
+
+        <TextView
+            android:id="@+id/textView0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="ANNOUNCEMENT FOR TEAM SEARCH"
+            android:textAlignment="center"
+            android:textColor="@color/color_ascent"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!--        Name-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Your Full Name">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_user_ann_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:inputType="textPersonName"
+                android:textSize="15sp">
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--        Hackathon Name-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Hackathon Title">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_user_ann_hack_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:inputType="textPersonName"
+                android:textSize="15sp">
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--        Domain-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:padding="5dp"
+                android:text="SELECT HACKATHON DOMAIN"
+                android:textAlignment="center"
+                android:textColor="@color/color_ascent" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--        Domain Selection Radio Button-->
+        <RadioGroup
+            android:id="@+id/user_ann_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+
+            <RadioButton
+                android:id="@+id/rb_user_ann_hack_software"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="onRadioButtonClicked"
+                android:text="Software" />
+
+            <RadioButton
+                android:id="@+id/rb_user_ann_hack_hardware"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="onRadioButtonClicked"
+                android:text="Hardware" />
+
+            <RadioButton
+                android:id="@+id/rb_user_ann_hack_both"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="onRadioButtonClicked"
+                android:text="Both" />
+
+        </RadioGroup>
+
+        <!--Requirements-->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:padding="5dp"
+            android:text="Requirements"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/color_ascent" />
+
+        <EditText
+            android:id="@+id/et_user_ann_requirements"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edit_text_border"
+            android:gravity="top|left"
+            android:hint="Requirements"
+            android:lines="5"
+            android:padding="5dp" />
+
+        <!--        Message for Announcement-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:padding="5dp"
+            android:text="Message for Announcement"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/color_ascent" />
+
+        <EditText
+            android:id="@+id/et_user_ann_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edit_text_border"
+            android:gravity="top|left"
+            android:hint="Message for Announcement"
+            android:lines="5"
+            android:padding="5dp" />
+
+        <!--            Event Dates-->
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:text="EVENT DATES"
+            android:textAlignment="center"
+            android:textColor="@color/color_ascent" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/img_btn_user_ann_start_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:src="@drawable/ic_date" />
+
+            <EditText
+                android:id="@+id/et_user_ann_hack_start_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:hint="DD/MM/YYYY"
+                android:inputType="date"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="2"
+                android:padding="5dp"
+                android:text="TO"
+                android:textColor="@color/color_secondary"
+                android:textSize="15sp" />
+
+            <ImageButton
+                android:id="@+id/img_btn_user_ann_end_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:src="@drawable/ic_date" />
+
+            <EditText
+                android:id="@+id/et_user_ann_hack_end_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:hint="DD/MM/YYYY"
+                android:inputType="date"
+                android:padding="5dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_user_ann_create_ann"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginVertical="20dp"
+            android:background="@drawable/rounded_button"
+            android:padding="5dp"
+            android:text="SUBMIT" />
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
